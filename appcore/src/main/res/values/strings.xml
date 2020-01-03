@@ -1,0 +1,21 @@
+<resources tools:ignore="MissingTranslation" xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Library</string>
+    <string name="app_link_err">(づ￣3￣)づ服务器君打野去了!</string>
+    <string name="rmb">¥&#160;</string>
+    <!--中文留白-->
+    <string name="empty_cn">&#12288;</string>
+    <string name="empty">　</string>
+    <string name="emptyline">┃</string>
+
+    <string name="app_txt_load"></string>
+    <string name="app_city_1"></string>
+    <string name="app_city_2"></string>
+    <string name="app_city_3"></string>
+
+    <string name="dialog_message_title">温馨提示</string>
+    <string name="dialog_btn_confrim">确定</string>
+    <string name="dialog_btn_cancle">取消</string>
+
+    <string name="group_main_forbidden_words">该群已禁止发言</string>
+    <string name="group_you_forbidden_words">你已被群主禁言</string>
+</resources>

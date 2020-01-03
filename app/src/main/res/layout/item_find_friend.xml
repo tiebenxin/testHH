@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/app_layout_list1_item">
+
+    <ImageView
+        android:id="@+id/img_head"
+        style="@style/app_img_head"
+        android:layout_marginRight="@dimen/app_margin_item" />
+
+
+    <TextView
+        android:id="@+id/txt_name"
+        style="@style/app_txt_title_2"
+        android:layout_marginRight="@dimen/app_margin_item"
+        android:layout_weight="1"
+        android:text="xxxx" />
+
+</LinearLayout>

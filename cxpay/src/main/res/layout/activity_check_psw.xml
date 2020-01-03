@@ -1,0 +1,43 @@
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:headview_title="密码校验">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/c_000000"
+            android:text="请输入支付密码，验证身份"
+            android:layout_marginTop="78dp"
+            android:layout_marginBottom="26dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <com.hm.cxpay.widget.PswView
+            android:id="@+id/psw_view"
+            android:layout_width="311dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@null"
+            android:cursorVisible="false"
+            android:inputType="number"
+            android:maxLength="6"
+            app:passwordLength="6"
+            app:borderWidth="1dp"
+            app:borderColor="@color/c_c2c2c4"
+            app:borderRadius="5dp"
+            app:passwordWidth="5dp"
+            app:passwordColor="@color/c_000000"/>
+
+    </LinearLayout>
+
+
+</net.cb.cb.library.view.HeadView>

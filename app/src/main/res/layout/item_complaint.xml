@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/app_layout_list2_item">
+
+
+        <TextView
+            android:id="@+id/txt_complaint_title"
+            style="@style/app_txt_title_2"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/app_margin_item"
+            android:text="wow" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_btn_goto" />
+    </LinearLayout>
+
+    <View style="@style/app_line" />
+</LinearLayout>

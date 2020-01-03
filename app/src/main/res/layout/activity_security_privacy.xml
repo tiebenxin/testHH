@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_100"
+    android:orientation="vertical"
+    app:headview_title="安全与隐私">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/app_layout_list2_item">
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="允许通过手机号搜索" />
+
+            <CheckBox
+                android:id="@+id/cb_find_phone"
+                style="@style/app_check" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/app_txt_content_2"
+            android:text="关闭后,你不会被其他用户通过手机号找到,也不会被其他用户通过手机通讯录匹配到." />
+
+        <LinearLayout style="@style/app_layout_list2_item">
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="允许通过常信号搜到我" />
+
+            <CheckBox
+                android:id="@+id/cb_find_product_number"
+                style="@style/app_check" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/app_txt_content_2"
+            android:text="关闭后,你不会被其他用户通过常信号找到." />
+
+
+        <LinearLayout
+            android:id="@+id/view_setting_password"
+            style="@style/app_layout_list2_item">
+
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:layout_weight="1"
+                android:text="设置登录密码" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_btn_goto" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/app_layout_list2_item">
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="加我为朋友时需要验证" />
+
+            <CheckBox
+                android:id="@+id/cb_verification"
+                style="@style/app_check" />
+
+        </LinearLayout>
+
+        <View style="@style/app_line" />
+
+
+        <TextView
+            style="@style/app_txt_content_2"
+            android:text="设置登录密码后,可以使用密码登录." />
+
+
+
+        <View
+            style="@style/app_line"/>
+
+
+        <LinearLayout
+            android:id="@+id/view_set_read"
+            style="@style/app_layout_list2_item">
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:layout_weight="1"
+                android:text="已读回执" />
+
+            <CheckBox
+                android:id="@+id/ck_set_read"
+                style="@style/app_check" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/app_txt_content_2"
+            android:text="查看所有会话消息已读状态,如果关闭已读回执,您也将无法查看所有人的消息已读回执" />
+
+
+        <LinearLayout
+            android:id="@+id/view_blacklist"
+            style="@style/app_layout_list2_item">
+
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:layout_weight="1"
+                android:text="黑名单" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_btn_goto" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/app_txt_content_2"
+            android:text="被添加的联系人将无法发送消息给你" />
+
+    </LinearLayout>
+
+</net.cb.cb.library.view.HeadView>

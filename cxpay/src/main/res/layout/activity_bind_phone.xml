@@ -1,0 +1,123 @@
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:headview_title="实名认证">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="12sp"
+            android:textColor="@color/c_868686"
+            android:text="手机号验证"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/line_one"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="25dp"
+                android:text="手机号"
+                android:textColor="@color/c_353535"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_phone_num"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:ellipsize="end"
+                android:hint="请输入您的手机号"
+                android:inputType="number"
+                android:maxLines="1"
+                android:layout_marginRight="25dp"
+                android:textColor="@color/c_000000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_phone_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginRight="25dp"
+                android:textColor="@color/c_000000"
+                android:visibility="gone"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            style="@style/money_change_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="25dp"
+                android:text="验证码"
+                android:textColor="@color/c_353535"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:ellipsize="end"
+                android:hint="请输入验证码"
+                android:inputType="number"
+                android:maxLines="1"
+                android:layout_marginRight="25dp"
+                android:textColor="@color/c_000000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_get_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="获取验证码"
+                android:layout_marginRight="25dp"
+                android:textColor="@color/c_31a156"
+                android:visibility="visible"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="322dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tv_balance"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/shape_5radius_solid_32b053"
+            android:gravity="center"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+</net.cb.cb.library.view.HeadView>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.mcxtzhang.swipemenulib.SwipeMenuLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:ios="false"
+        app:swipeEnable="true">
+
+        <LinearLayout
+            android:id="@+id/layout_item"
+            style="@style/app_layout_list1">
+
+            <LinearLayout style="@style/app_layout_list1_item">
+
+                <ImageView
+                    android:id="@+id/img_head"
+                    style="@style/app_img_head"
+                    android:layout_marginRight="@dimen/app_margin_item" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/app_margin_item"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_name"
+                        style="@style/app_txt_title_2"
+                        android:text="xxxx" />
+
+                    <TextView
+                        android:id="@+id/txt_info"
+                        style="@style/app_txt_content_1"
+                        android:text="xxxx" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_state"
+                    style="@style/app_txt_content_1"
+                    android:layout_width="57dp"
+                    android:layout_height="29dp"
+                    android:gravity="center"
+                    android:text="xxxx"
+                    android:textColor="@color/gray_400"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_comit"
+                    style="@style/app_btn_green_s"
+                    android:text="接受" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_del"
+            style="@style/app_btn_red"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="删除" />
+    </com.mcxtzhang.swipemenulib.SwipeMenuLayout>
+
+    <View style="@style/app_line" />
+</LinearLayout>

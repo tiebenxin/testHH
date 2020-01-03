@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <SurfaceView
+            android:id="@+id/scanner_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+
+        <net.cb.cb.library.zxing.view.ViewfinderView
+            android:id="@+id/viewfinder_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:corner_color="@color/green_200"
+            app:label_text="将二维码放入框内,即可自动扫描"
+            app:label_text_color="@color/gray_300"
+            app:label_text_size="25"
+            app:laser_color="@color/green_200" />
+
+        <TextView
+            android:id="@+id/tv_my_qr_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="160dp"
+            android:text="我的二维码"
+            android:textColor="@color/green_200"
+            android:visibility="gone"
+            android:textSize="15sp" />
+
+
+        <net.cb.cb.library.view.ActionbarView
+            android:id="@+id/action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            app:actionbar_txtTitle="二维码" />
+
+
+    </FrameLayout>
+
+</LinearLayout>

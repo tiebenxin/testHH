@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:headview_title="通用">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            style="@style/app_line"
+            android:layout_marginTop="@dimen/app_margin_item_top"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/view_account_binding"
+            style="@style/app_layout_list2_item"
+            android:visibility="gone">
+
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:layout_weight="1"
+                android:text="账号与绑定" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:src="@mipmap/ic_btn_goto" />
+        </LinearLayout>
+
+        <View style="@style/app_line" />
+
+        <LinearLayout
+            android:id="@+id/view_new_message"
+            style="@style/app_layout_list2_item">
+
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:layout_weight="1"
+                android:text="新消息通知" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:src="@mipmap/ic_btn_goto" />
+        </LinearLayout>
+
+        <View style="@style/app_line" />
+
+        <LinearLayout
+            android:id="@+id/view_security_privacy"
+            style="@style/app_layout_list2_item">
+
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:layout_weight="1"
+                android:text="安全与隐私" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:src="@mipmap/ic_btn_goto" />
+        </LinearLayout>
+
+        <View
+            style="@style/app_line"
+            android:layout_marginTop="@dimen/app_margin_item_top" />
+
+        <LinearLayout
+            android:id="@+id/view_privacy"
+            style="@style/app_layout_list2_item">
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:layout_weight="1"
+                android:text="隐私政策" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:src="@mipmap/ic_btn_goto" />
+        </LinearLayout>
+
+        <View
+            style="@style/app_line"
+            android:layout_marginTop="@dimen/app_margin_item_top" />
+
+        <LinearLayout
+            android:id="@+id/view_seting_font"
+            style="@style/app_layout_list2_item">
+
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:layout_weight="1"
+                android:text="设置字体大小" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:src="@mipmap/ic_btn_goto" />
+        </LinearLayout>
+
+        <View style="@style/app_line" />
+
+        <LinearLayout
+            android:id="@+id/view_select_background"
+            style="@style/app_layout_list2_item">
+
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:layout_weight="1"
+                android:text="设置聊天背景" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:src="@mipmap/ic_btn_goto" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/app_layout_list2_item"
+            android:layout_marginTop="@dimen/app_margin_item_top">
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="听筒模式" />
+
+            <CheckBox
+                android:id="@+id/cb_voice"
+                style="@style/app_check" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/app_line" />
+
+
+        <LinearLayout
+            android:id="@+id/view_clear"
+            style="@style/app_layout_list2_item">
+
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:layout_weight="1"
+                android:text="清除聊天记录" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:src="@mipmap/ic_btn_goto" />
+        </LinearLayout>
+
+        <View style="@style/app_line" />
+
+        version
+
+        <View
+            style="@style/app_line"
+            android:layout_marginTop="@dimen/app_margin_item_top" />
+
+        <LinearLayout
+            android:id="@+id/view_about_as"
+            style="@style/app_layout_list2_item">
+
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:text="关于" />
+
+            <TextView
+                android:id="@+id/tv_version"
+                style="@style/app_txt_title_2" />
+
+            <TextView
+                android:id="@+id/tv_new_versions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textSize="10sp"
+                android:text="new"
+                android:background="@drawable/shape_new"
+                android:visibility="gone"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:src="@mipmap/ic_btn_goto" />
+        </LinearLayout>
+
+        <View style="@style/app_line" />
+
+
+        <Button
+            android:id="@+id/btn_exit"
+            style="@style/app_btn_white"
+            android:text="退出登录" />
+
+
+    </LinearLayout>
+
+
+</net.cb.cb.library.view.HeadView>

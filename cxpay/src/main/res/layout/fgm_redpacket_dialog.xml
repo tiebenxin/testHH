@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="286dp"
+        android:layout_height="440dp"
+        android:background="@mipmap/bg_rp">
+
+        <ImageView
+            android:id="@+id/img_cls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="8dp"
+            app:srcCompat="@mipmap/ic_rp_close" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="42dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.hm.cxpay.widget.CircleImageView
+                android:id="@+id/img_uhead"
+                style="@style/app_img_head"
+                android:layout_width="58dp"
+                app:civ_border_width="0dp"
+                android:layout_height="58dp" />
+
+            <TextView
+                android:id="@+id/txt_uname"
+                style="@style/app_txt_title_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="25dp"
+                android:text="nikename"
+                android:textColor="@color/yellow_200" />
+
+            <TextView
+                android:id="@+id/txt_rb_info"
+                style="@style/app_txt_title_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手慢了，红包派完了！"
+                android:textColor="@color/yellow_200" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/img_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingTop="140dp"
+            app:srcCompat="@mipmap/ic_rp_open" />
+
+        <TextView
+            android:id="@+id/txt_more"
+            style="@style/app_txt_content_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="17dp"
+            android:text="查看领取详情>"
+            android:textColor="@color/yellow_200" />
+    </RelativeLayout>
+</LinearLayout>

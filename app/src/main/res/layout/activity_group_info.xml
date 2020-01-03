@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    app:headview_title="聊天详情">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/app_layout_list1_item"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/topListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:id="@+id/view_group_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/app_txt_title_2"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:text="查看更多群成员"
+                        android:textColor="@color/gray_300" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_btn_goto" />
+                </LinearLayout>
+
+
+
+
+                <!--     <ImageView
+                         android:id="@+id/btn_add"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginRight="@dimen/app_margin_item"
+                         android:src="@mipmap/ic_group_a" />
+
+                     <ImageView
+                         android:id="@+id/btn_rm"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:src="@mipmap/ic_group_c" />-->
+
+            </LinearLayout>
+
+            <View style="@style/app_line" />
+
+
+            <LinearLayout style="@style/app_layout_list2">
+
+                <LinearLayout
+                    android:id="@+id/view_group_name"
+                    style="@style/app_layout_list2_item">
+
+                    <TextView
+                        style="@style/app_txt_title_2"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:text="群聊名称" />
+
+                    <TextView
+                        android:id="@+id/txt_group_name"
+                        style="@style/app_txt_title_2"
+                        android:layout_width="0dp"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textColor="@color/gray_300" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_btn_goto" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/view_group_img"
+                    style="@style/app_layout_list2_item">
+
+                    <TextView
+                        style="@style/app_txt_title_2"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:text="群头像" />
+
+                    <TextView
+                        android:id="@+id/txt_group_img"
+                        style="@style/app_txt_title_2"
+                        android:layout_width="0dp"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textColor="@color/gray_300" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_btn_goto" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_group_nick"
+                    style="@style/app_layout_list2_item">
+
+                    <TextView
+                        style="@style/app_txt_title_2"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:text="我在本群的信息" />
+
+                    <TextView
+                        android:id="@+id/txt_group_nick"
+                        style="@style/app_txt_title_2"
+                        android:layout_width="0dp"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textColor="@color/gray_300" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_btn_goto" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_group_qr"
+                    style="@style/app_layout_list2_item">
+
+                    <TextView
+                        style="@style/app_txt_title_2"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:layout_weight="1"
+                        android:text="群二维码" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:src="@mipmap/ic_group_qr" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_btn_goto" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/view_group_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:minHeight="48dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/app_margin_main"
+                        android:layout_marginRight="@dimen/app_margin_main">
+
+                        <TextView
+                            style="@style/app_txt_title_2"
+                            android:layout_marginRight="@dimen/app_margin_item"
+                            android:layout_weight="1"
+                            android:text="群公告" />
+
+                        <TextView
+                            android:id="@+id/txt_note"
+                            style="@style/app_txt_title_2"
+                            android:layout_marginRight="@dimen/app_margin_item"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="未设置"
+                            android:textColor="@color/gray_300" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/ic_btn_goto" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_group_note"
+                        style="@style/app_txt_content_3"
+                        android:layout_marginLeft="@dimen/app_margin_main"
+                        android:layout_marginRight="@dimen/app_margin_main"
+                        android:maxLines="4"
+                        tool:text=""
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/gray_300" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/app_layout_list2">
+
+                <LinearLayout
+                    android:id="@+id/view_group_manage"
+                    style="@style/app_layout_list2_item">
+
+                    <TextView
+                        style="@style/app_txt_title_2"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:layout_weight="1"
+                        android:text="群管理" />
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_btn_goto" />
+                </LinearLayout>
+
+                <!--增加群人数上限至1000人-->
+                <LinearLayout
+                    android:id="@+id/view_group_add"
+                    style="@style/app_layout_list2_item">
+
+                    <TextView
+                        style="@style/app_txt_title_red"
+                        android:textColor="@color/red_400"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:text="增加群人数上限至1000人" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:id="@+id/txt_group_add"
+                        style="@style/app_txt_title_4"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:text="" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_btn_goto" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/app_layout_list2">
+
+                <LinearLayout
+                    android:id="@+id/view_log"
+                    style="@style/app_layout_list2_item">
+
+                    <TextView
+                        style="@style/app_txt_title_2"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:layout_weight="1"
+                        android:text="查找聊天记录" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_btn_goto" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/view_clear_chat_record"
+                    style="@style/app_layout_list2_item">
+
+                    <TextView
+                        style="@style/app_txt_title_2"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:layout_weight="1"
+                        android:text="清空聊天记录" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/app_layout_list2">
+
+                <LinearLayout
+                    android:id="@+id/view_encode"
+                    style="@style/app_layout_list2_item">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/app_txt_title_2"
+                            android:layout_marginRight="@dimen/app_margin_item"
+                            android:layout_weight="1"
+                            android:text="加密" />
+
+                        <TextView
+                            style="@style/app_txt_title_3"
+                            android:layout_marginRight="@dimen/app_margin_item"
+                            android:layout_weight="1"
+                            android:text="此对话中所发送的信息都已经进行端到端加密"
+                            android:textColor="@color/gray_300" />
+
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_lock" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/app_layout_list2">
+
+                <LinearLayout
+                    android:id="@+id/view_top"
+                    style="@style/app_layout_list2_item">
+
+                    <TextView
+                        style="@style/app_txt_title_2"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:layout_weight="1"
+                        android:text="置顶聊天" />
+
+                    <CheckBox
+                        android:id="@+id/ck_top"
+                        style="@style/app_check" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_disturb"
+                    style="@style/app_layout_list2_item">
+
+                    <TextView
+                        style="@style/app_txt_title_2"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:layout_weight="1"
+                        android:text="消息免打扰" />
+
+                    <CheckBox
+                        android:id="@+id/ck_disturb"
+                        style="@style/app_check" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_group_save"
+                    style="@style/app_layout_list2_item">
+
+                    <TextView
+                        style="@style/app_txt_title_2"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:layout_weight="1"
+                        android:text="保存到通讯录" />
+
+                    <CheckBox
+                        android:id="@+id/ck_group_save"
+                        style="@style/app_check" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_group_verif"
+                    style="@style/app_layout_list2_item"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/app_txt_title_2"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:layout_weight="1"
+                        android:text="加群验证" />
+
+                    <CheckBox
+                        android:id="@+id/ck_group_verif"
+                        style="@style/app_check" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                style="@style/app_layout_list2"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:id="@+id/view_destroy_time"
+                    style="@style/app_layout_list2_item">
+
+                    <TextView
+                        style="@style/app_txt_title_2"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:layout_weight="1"
+                        android:text="阅后即焚" />
+
+                    <TextView
+                        android:id="@+id/tv_destroy_time"
+                        style="@style/app_txt_title_2"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:textColor="@color/gray_300"
+                        android:text="关闭"/>
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_btn_goto" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="@dimen/app_margin_main"
+                    android:paddingRight="@dimen/app_margin_main"
+                    android:text="如果设置该选项,该聊天里面发送和接受消息将在阅读后指定时间内消失" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/app_layout_list2">
+
+                <LinearLayout
+                    android:id="@+id/view_complaint"
+                    style="@style/app_layout_list2_item">
+
+                    <TextView
+                        style="@style/app_txt_title_2"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:layout_weight="1"
+                        android:text="投诉" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_btn_goto" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_del"
+                style="@style/app_btn_white"
+                android:text="删除并退出" />
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</net.cb.cb.library.view.HeadView>

@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:orientation="vertical" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_face_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <RadioGroup
+            android:id="@+id/view_face_radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="25dp"
+            android:padding="5dp" />
+
+        <RadioGroup
+            android:id="@+id/view_face_select"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:orientation="horizontal" >
+
+            <com.yanlong.im.view.CustomRadioButton
+                android:id="@+id/face_emoji"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:checked="true"
+                android:background="@drawable/rb_face_selector"
+                android:gravity="center"
+                android:drawableStart="@mipmap/img_chat_face" />
+
+            <com.yanlong.im.view.CustomRadioButton
+                android:id="@+id/animo_emoji"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:gravity="center"
+                android:visibility="gone"
+                android:background="@drawable/rb_face_selector"
+                android:drawableStart="@mipmap/img_chat_time" />
+
+            <com.yanlong.im.view.CustomRadioButton
+                android:id="@+id/custom_emoji"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:gravity="center"
+                android:visibility="gone"
+                android:background="@drawable/rb_face_selector"
+                android:drawableStart="@mipmap/img_chat_collection" />
+
+            <com.yanlong.im.view.CustomRadioButton
+                android:id="@+id/cb_face_pig"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:gravity="center"
+                android:background="@drawable/rb_face_selector"
+                android:drawableStart="@mipmap/img_chat_pig" />
+
+            <com.yanlong.im.view.CustomRadioButton
+                android:id="@+id/cb_face_mammon"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:gravity="center"
+                android:background="@drawable/rb_face_selector"
+                android:drawableStart="@mipmap/img_chat_mammon" />
+
+            <com.yanlong.im.view.CustomRadioButton
+                android:id="@+id/cb_face_panda"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:gravity="center"
+                android:background="@drawable/rb_face_selector"
+                android:drawableStart="@mipmap/img_chat_panda" />
+        </RadioGroup>
+    </LinearLayout>
+
+</RelativeLayout>

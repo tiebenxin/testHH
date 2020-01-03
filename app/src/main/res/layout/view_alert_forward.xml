@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+
+        style="@style/app_txt_title_2"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/app_margin_main"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="@dimen/app_margin_main"
+
+        android:layout_marginBottom="15dp"
+        android:gravity="left"
+        android:singleLine="false"
+        android:text="发送给:" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/app_margin_main"
+        android:layout_marginRight="@dimen/app_margin_main"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.yanlong.im.wight.avatar.MultiImageView
+            android:id="@+id/img_head"
+            style="@style/app_img_head"
+            android:layout_marginRight="@dimen/app_margin_item"
+            android:background="@drawable/bg_head_gray_shape"
+            android:layout_gravity="center|left"/>
+
+        <TextView
+            android:id="@+id/txt_name"
+            style="@style/app_txt_title_2"
+            android:text="xxxx" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="LinearLayoutManager"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <View
+        style="@style/app_line"
+        android:layout_marginLeft="@dimen/app_margin_main"
+        android:layout_marginTop="@dimen/app_margin_item"
+        android:layout_marginRight="@dimen/app_margin_main"
+        android:layout_marginBottom="@dimen/app_margin_item" />
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="150dp"
+        android:layout_height="180dp"
+        android:maxHeight="180dp"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/txt_msg"
+        style="@style/app_txt_title_2"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/app_margin_main"
+        android:layout_marginRight="@dimen/app_margin_main"
+        android:maxLines="2"
+        android:singleLine="false"
+        android:text="标题" />
+
+
+    <EditText
+        android:id="@+id/ed_content"
+        style="@style/app_edt1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="@dimen/app_margin_item"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_touch_edit"
+        android:paddingLeft="8dp"
+        android:hint="给好友留言"
+        android:maxLength="200"
+        android:paddingRight="8dp" />
+
+
+    <View style="@style/app_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/view_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cl"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:text="取消"
+                android:textColor="@color/gray_400" />
+
+            <View
+                style="@style/app_line_portrait"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:text="更新"
+            android:textColor="@color/green_600" />
+    </LinearLayout>
+
+</LinearLayout>

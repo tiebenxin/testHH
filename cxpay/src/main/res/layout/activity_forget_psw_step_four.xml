@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:headview_title="找回支付密码">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/app_txt_content_1"
+            android:layout_marginLeft="@dimen/app_margin_main"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="请输入收到的短信验证码"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="50dp">
+
+            <EditText
+                android:id="@+id/et_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:ellipsize="end"
+                android:hint="请输入短信验证码"
+                android:layout_marginLeft="30dp"
+                android:maxLines="1"
+                android:inputType="number"
+                android:textColor="@color/c_0f0f0f"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_get_code"
+                style="@style/app_txt_title_2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:gravity="center"
+                android:text="重新获取验证码"
+                android:textColor="@color/green_600"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </LinearLayout>
+
+        <View style="@style/money_change_line"
+            android:layout_marginLeft="30dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="322dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:text="下一步"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:background="@drawable/shape_5radius_solid_32b053"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</net.cb.cb.library.view.HeadView>

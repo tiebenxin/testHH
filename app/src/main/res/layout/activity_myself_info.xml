@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_100"
+    app:headview_title="个人信息">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <View
+            style="@style/app_line"
+            android:layout_marginTop="@dimen/app_margin_item_top" />
+
+        <LinearLayout
+            android:id="@+id/view_head"
+            style="@style/app_layout_list2_item"
+            android:layout_height="89dp">
+
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:layout_weight="1"
+                android:text="头像" />
+
+
+            <ImageView
+                android:id="@+id/img_head"
+                style="@style/app_img_head"
+                android:layout_width="63dp"
+                android:layout_height="63dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:src="@mipmap/ic_btn_goto" />
+        </LinearLayout>
+
+        <View style="@style/app_line" />
+
+        <LinearLayout
+            android:id="@+id/view_blacklist"
+            style="@style/app_layout_list2_item">
+
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:layout_weight="1"
+                android:text="手机号" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                style="@style/app_txt_title_4" />
+
+
+        </LinearLayout>
+
+        <View style="@style/app_line" />
+
+        <LinearLayout
+            android:id="@+id/view_nickname"
+            style="@style/app_layout_list2_item">
+
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:layout_weight="1"
+                android:text="昵称" />
+
+            <TextView
+                android:id="@+id/tv_nickname"
+                style="@style/app_txt_title_4"
+                android:maxEms="9"
+                tool:text="1111111111111111111111111111111"
+                />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:src="@mipmap/ic_btn_goto" />
+        </LinearLayout>
+
+        <View style="@style/app_line" />
+
+        <LinearLayout
+            android:id="@+id/view_product_number"
+            style="@style/app_layout_list2_item">
+
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:layout_weight="1"
+                android:text="常信号" />
+
+            <TextView
+                android:id="@+id/tv_product_number"
+                style="@style/app_txt_title_4" />
+
+
+            <ImageView
+                android:id="@+id/iv_product_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:src="@mipmap/ic_btn_goto" />
+        </LinearLayout>
+
+        <View style="@style/app_line" />
+
+        <View
+            style="@style/app_line"
+            android:layout_marginTop="@dimen/app_margin_item_top" />
+
+        <LinearLayout
+            android:id="@+id/view_sex"
+            style="@style/app_layout_list2_item">
+
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:layout_weight="1"
+                android:text="性别" />
+
+            <TextView
+                android:id="@+id/tv_sex"
+                style="@style/app_txt_title_4"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:src="@mipmap/ic_btn_goto" />
+        </LinearLayout>
+
+        <View style="@style/app_line" />
+
+
+        <View
+            style="@style/app_line"
+            android:layout_marginTop="@dimen/app_margin_item_top" />
+
+        <LinearLayout
+            android:id="@+id/view_identity"
+            style="@style/app_layout_list2_item"
+            android:visibility="gone">
+
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:layout_weight="1"
+                android:text="实名认证" />
+
+            <TextView
+                android:id="@+id/tv_identity"
+                style="@style/app_txt_title_4"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:src="@mipmap/ic_btn_goto" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</net.cb.cb.library.view.HeadView>

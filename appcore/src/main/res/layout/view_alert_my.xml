@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_alert_title"
+        style="@style/app_txt_title_2"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/app_margin_main"
+        android:layout_marginRight="@dimen/app_margin_main"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="标题" />
+
+    <LinearLayout
+        android:id="@+id/view_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"></LinearLayout>
+
+</LinearLayout>

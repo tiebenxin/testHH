@@ -1,0 +1,631 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yanlong.im">
+
+    <!--    <uses-permission android:name="android.permission.VIBRATE" />-->
+    <!--    <uses-feature android:name="android.hardware.camera" />-->
+    <application
+        android:name=".MyAppLication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/MainAppThrme"
+        tools:replace="android:theme,android:allowBackup">
+
+        <!--        <meta-data
+                    android:name="JRMF_PARTNER_ID"
+                    android:value="zhixuntest"/>
+                    <meta-data
+                        android:name="JRMF_PARTNER_NAME"
+                        android:value="红包"/> -->
+        <!--打包渠道-->
+        <!--<meta-data-->
+        <!--android:name="UMENG_CHANNEL"-->
+        <!--android:value="${UMENG_CHANNEL_VALUE}" />-->
+
+        <meta-data
+            android:name="com.luck.picture.lib.glide.CustomGlideModule"
+            android:value="AppGlideModule" />
+
+        <!--        <meta-data-->
+        <!--            android:name="com.huawei.hms.client.appid"-->
+        <!--            android:value="appid=100836087" />-->
+        <!--        &lt;!&ndash; vivo onCreate&ndash;&gt;-->
+        <!--        <meta-data-->
+        <!--            android:name="com.vivo.push.api_key"-->
+        <!--            android:value="f1940b91-4b0d-4c5c-914e-657045438bc4" />-->
+        <!--        <meta-data-->
+        <!--            android:name="com.vivo.push.app_id"-->
+        <!--            android:value="15217" />-->
+        <!-- VIVO end-->
+
+        <meta-data
+            android:name="JRMF_PARTNER_ID"
+            android:value="cll0814" />
+
+
+        <meta-data
+            android:name="JRMF_PARTNER_NAME"
+            android:value="云红包" />
+
+        <!--网易云-->
+        <!--        <meta-data-->
+        <!--            android:name="com.netease.nim.appKey"-->
+        <!--            android:value="key_of_your_app" />-->
+
+        <!-- 配置bugly APP ID -->
+        <meta-data
+            android:name="BUGLY_APPID"
+            android:value="7780d7e928" />
+
+        <!-- 极光推送-->
+        <service
+            android:name="com.yanlong.im.notify.PushService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.yanlong.im.notify.MyJPushMessageReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+                <category android:name="com.yanlong.im" />
+            </intent-filter>
+        </receiver>
+
+
+        <!--         百度地图配置-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="L7VrjgIV1dMONUenMO8XmIwOPKGLSDE5" />
+        <!--         百度地图配置-->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+
+        <!-- 启动页-->
+        <activity
+            android:name=".user.ui.SplashActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/LauncherAppThemeNoTranslucent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <data
+                    android:host="changxin.zhixun6.com"
+                    android:path="/cx"
+                    android:scheme="changxin" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <!--聊天服务-->
+        <service android:name=".chat.server.UpLoadService" />
+
+        <service android:name=".chat.server.ChatServer">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </service>
+
+        <!-- 新的朋友-->
+        <activity
+            android:name=".user.ui.FriendApplyAcitvity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- 匹配朋友-->
+        <activity
+            android:name=".user.ui.FriendMatchActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <!-- 添加朋友-->
+        <activity
+            android:name=".user.ui.FriendAddAcitvity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <!-- 保存的群聊-->
+        <activity
+            android:name=".chat.ui.GroupSaveActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- 创建群聊-->
+        <activity
+            android:name=".chat.ui.GroupCreateActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <!--群聊成员-->
+        <activity
+            android:name=".chat.ui.GroupInfoMumberActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <!-- 群聊成员操作-->
+        <activity
+            android:name=".chat.ui.GroupNumbersActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <!--消息转发-->
+        <activity
+            android:name=".chat.ui.forward.MsgForwardActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!--群信息-->
+        <activity
+            android:name=".chat.ui.GroupInfoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!--会话信息-->
+        <activity
+            android:name=".chat.ui.ChatInfoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!--聊天界面-->
+        <activity
+            android:name=".chat.ui.ChatActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".chat.ui.chat.ChatActivity3"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+
+        <!--好友,群搜索-->
+        <activity
+            android:name=".chat.ui.SearchFriendGroupActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!--搜索消息-->
+        <activity
+            android:name=".chat.ui.SearchMsgActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <!--消息搜索跳转-->
+        <activity
+            android:name=".chat.ui.MsgSearchActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+
+        <!--聊天戳一下界面-->
+        <activity
+            android:name=".chat.ui.ChatActionActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <!--聊天字体设置-->
+        <activity
+            android:name=".chat.ui.ChatFontActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!--选择登录注册-->
+        <activity
+            android:name=".user.ui.SelectLoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!--密码登录-->
+        <activity
+            android:name=".user.ui.PasswordLoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <!--验证码登录-->
+        <activity
+            android:name=".user.ui.IdentifyingCodeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!--注册页面-->
+        <activity
+            android:name=".user.ui.RegisterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".user.ui.RegisterUserNameActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!--注册页面end-->
+
+        <!--忘记密码-->
+        <activity
+            android:name=".user.ui.ForgotPasswordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".user.ui.ForgotPasswordNextActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!--忘记密码 end-->
+        <!--修改密码-->
+        <activity
+            android:name=".user.ui.ChangePasswordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".user.ui.SetingPasswordActitity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!--安全隐私-->
+        <activity
+            android:name=".user.ui.SecurityPrivacyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!--个人信息-->
+        <activity
+            android:name=".user.ui.MyselfInfoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!--通用设置-->
+        <activity
+            android:name=".user.ui.CommonActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!--新消息设置-->
+        <activity
+            android:name=".user.ui.NewMessageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!--选择职业-->
+        <activity
+            android:name=".user.ui.SelectProfessionActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!--账号绑定-->
+        <activity
+            android:name=".user.ui.AccountBindingActvity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!--二维码-->
+        <activity
+            android:name=".user.ui.MyselfQRCodeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!--零钱-->
+        <!--登录-->
+        <activity
+            android:name=".user.ui.LoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <!--关于-->
+        <activity
+            android:name=".user.ui.AboutAsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!--公共设置页面-->
+        <activity
+            android:name=".user.ui.CommonSetingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!--选择性别-->
+        <activity
+            android:name=".user.ui.SelectSexActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!--个人头像-->
+        <activity
+            android:name=".user.ui.ImageHeadActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!--用户资料-->
+        <activity
+            android:name=".user.ui.UserInfoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!--选择用户-->
+        <activity
+            android:name=".user.ui.SelectUserActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!--上传身份证照片-->
+        <activity
+            android:name=".user.ui.UploadIdentityActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!--投诉-->
+        <activity
+            android:name=".user.ui.ComplaintActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".user.ui.ComplaintUploadActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!--实名认证-->
+        <activity
+            android:name="com.hm.cxpay.ui.identification.IdentificationUserActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!--单个红包-->
+<!--        <activity-->
+<!--            android:name="com.hm.cxpay.ui.redenvelope.SingleRedPacketActivity"-->
+<!--            android:launchMode="singleTask"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:theme="@style/RedAppThrme" />-->
+        <!--群红包-->
+<!--        <activity-->
+<!--            android:name="com.hm.cxpay.ui.redenvelope.MultiRedPacketActivity"-->
+<!--            android:launchMode="singleTask"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:theme="@style/RedAppThrme" />-->
+        <!--红包详情-->
+        <activity
+            android:name=".pay.ui.record.SingleRedPacketDetailsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/RedAppThrme" />
+
+        <!--红包记录-->
+        <activity
+            android:name=".pay.ui.record.RedpacketRecordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/RedAppThrme" />
+
+        <!--帮助-->
+        <activity
+            android:name=".user.ui.HelpActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!--帮助详情-->
+        <activity
+            android:name=".user.ui.HelpInfoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!--查找好友-->
+        <activity
+            android:name=".user.ui.FindFriendActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!--黑名单-->
+        <activity
+            android:name=".user.ui.BlacklistActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!--加群聊-->
+        <activity
+            android:name=".chat.ui.AddGroupActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!--群助手信息-->
+        <activity
+            android:name=".chat.ui.GroupRobotActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!--群管理-->
+        <activity
+            android:name=".chat.ui.GroupManageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!--群助手选择页面-->
+        <activity
+            android:name=".chat.ui.GroupRobotSelecActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name=".user.ui.IdentityAttestationActitiy"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".chat.ui.GroupSelectUserActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!--选择背景-->
+        <activity
+            android:name=".user.ui.BackgroundImageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!--意见反馈-->
+        <activity
+            android:name=".user.ui.FeedbackActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!--云红包 服务协议-->
+        <activity
+            android:name=".user.ui.ServiceAgreementActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".notify.MessageActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity="" />
+
+        <!--设置管理员-->
+        <activity
+            android:name=".chat.ui.groupmanager.SetupSysManagerActivity"
+            android:screenOrientation="portrait" />
+        <!--禁止领取零钱红包-->
+        <activity
+            android:name=".chat.ui.groupmanager.NoRedEnvelopesActivity"
+            android:screenOrientation="portrait" />
+        <!--未领取零钱红包-->
+        <activity
+            android:name=".chat.ui.groupmanager.NoRedBagActivity"
+            android:screenOrientation="portrait" />
+        <!--不活跃群成员-->
+        <activity
+            android:name=".chat.ui.groupmanager.InactiveMemberActivity"
+            android:screenOrientation="portrait" />
+        <!--不活跃群成员列表-->
+        <activity
+            android:name=".chat.ui.groupmanager.InactiveMemberListActivity"
+            android:screenOrientation="portrait" />
+        <!--退群成员列表-->
+        <activity
+            android:name=".chat.ui.groupmanager.ExitGroupActivity"
+            android:screenOrientation="portrait" />
+        <!--群成员权限设置-->
+        <activity
+            android:name=".chat.ui.groupmanager.GroupMemPowerSetActivity"
+            android:screenOrientation="portrait" />
+        <!--设置标签-->
+        <activity
+            android:name=".chat.ui.groupmanager.SetupGroupMemberLableActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".user.ui.FeedbackShowImageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".user.ui.GroupAddActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".chat.ui.GroupNoteDetailEditActivity"
+            android:screenOrientation="portrait" />
+
+        <!--        <receiver-->
+        <!--            android:name=".notify.MyReceiver"-->
+        <!--            android:enabled="true"-->
+        <!--            android:exported="false">-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="cn.jpush.android.intent.REGISTRATION" />-->
+        <!--                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />-->
+        <!--                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />-->
+        <!--                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />-->
+        <!--                <action android:name="cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION" />-->
+        <!--                <action android:name="cn.jpush.android.intent.CONNECTION" />-->
+        <!--                <category android:name="com.yanlong.im" />-->
+        <!--            </intent-filter>-->
+        <!--        </receiver>-->
+
+        <activity
+            android:name=".chat.ui.NoticeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <receiver android:name=".utils.audio.AudioPlayManager$HeadsetReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.HEADSET_PLUG" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".user.ui.image.PictureExternalPreviewActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <!--协议部分，-->
+                <data
+                    android:host="picture"
+                    android:path="/mainDetail"
+                    android:scheme="scheme" />
+                <!--下面这几行也必须得设置-->
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".chat.ui.forward.GroupSelectActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".chat.ui.GroupNoteDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".test.TestRecyclerActivity">
+            <intent-filter android:priority="1">
+                <data
+                    android:host="test"
+                    android:path="/test"
+                    android:scheme="scheme" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".user.ui.FriendVerifyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".chat.ui.VideoPlayActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!--位置-->
+        <activity
+            android:name=".location.LocationActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".pay.ui.record.RedEnvelopeRecordActivity" />
+
+    </application>
+
+</manifest>

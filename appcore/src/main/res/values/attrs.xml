@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- actionbar控件 -->
+    <declare-styleable name="ActionbarView">
+        <attr name="actionbar_txtTitle" format="string" />
+        <attr name="actionbar_txtLeft" format="string" />
+        <attr name="actionbar_txtRight" format="string" />
+        <attr name="actionbar_showIconLeft" format="boolean" />
+        <attr name="actionbar_btnBackIcon" format="reference" />
+        <attr name="actionbar_rightIcon" format="reference" />
+    </declare-styleable>
+    <!-- 头部引入-->
+    <declare-styleable name="HeadView">
+        <attr name="headview_background" format="reference" />
+        <attr name="headview_top_layout" format="reference" />
+        <attr name="headview_title" format="string" />
+    </declare-styleable>
+    <!-- 小红点 -->
+    <declare-styleable name="StrikeButtonView">
+        <attr name="strike_icon_res" format="reference" />
+        <attr name="strike_type">
+            <flag name="big" value="0" />
+            <flag name="small" value="1" />
+
+        </attr>
+    </declare-styleable>
+
+
+    <!-- 星条控件 -->
+    <declare-styleable name="ScoreStarView">
+        <attr name="ssStyle">
+            <enum name="Snormal" value="0" />
+            <enum name="Sbig" value="1" />
+        </attr>
+        <attr name="ssType">
+            <enum name="typeShow" value="0" />
+            <enum name="typeDoing" value="1" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="MultiPicView">
+        <attr name="picview_type">
+            <enum name="isdo" value="0" />
+            <enum name="isshow" value="1" />
+        </attr>
+
+    </declare-styleable>
+
+    <!-- 装载-->
+    <declare-styleable name="WaitView">
+        <attr name="waitview_state" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ViewfinderView">
+        <attr name="corner_color" format="color"/>
+        <attr name="laser_color" format="color"/>
+        <attr name="frame_color" format="color" />
+        <attr name="mask_color" format="color" />
+        <attr name="result_point_color" format="color"/>
+        <attr name="result_color" format="color" />
+        <attr name="label_text_color" format="color"/>
+        <attr name="label_text" format="string"/>
+        <attr name="label_text_size" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="SpringView">
+        <attr name="type">
+            <enum name="overlap" value="0"/>
+            <enum name="follow" value="1"/>
+        </attr>
+        <attr name="give">
+            <enum name="both" value="0"/>
+            <enum name="top" value="1"/>
+            <enum name="bottom" value="2"/>
+            <enum name="none" value="3"/>
+        </attr>
+        <attr format="reference" name="header"/>
+        <attr format="reference" name="footer"/>
+        <attr format="reference" name="leftRes"/>
+        <attr format="reference" name="rightRes"/>
+    </declare-styleable>
+
+</resources>

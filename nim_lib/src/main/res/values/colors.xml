@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_blue_3a9efb">#3a9efb</color>
+    <color name="call_bg">#707070</color>
+
+    <color name="video_call_peer_close_cameral_text_shadow">#484848</color>
+    <color name="video_call_peer_close_cameral_text_color">#f1f1f1</color>
+    <color name="color_grey_999999">#999999</color>
+    <color name="color_d8d">#d8d8d8</color>
+    <color name="color_707">#707070</color>
+    <color name="white">#ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="color_2e2">#2e2e2e</color>
+
+</resources>

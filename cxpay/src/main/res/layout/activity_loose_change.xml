@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:headview_title="零钱">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/c_c85749">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:drawableLeft="@mipmap/ic_loose_change"
+                    android:drawablePadding="6dp"
+                    android:text="账户余额"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="¥ 0.00"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="27sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="23dp"
+                    android:layout_height="47dp"
+                    android:background="@color/c_c05042">
+
+                    <LinearLayout
+                        android:id="@+id/layout_recharge"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:src="@mipmap/ic_recharge"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="充值"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginBottom="11dp"
+                        android:background="@color/white"/>
+
+                    <LinearLayout
+                        android:id="@+id/layout_withdraw_deposit"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:src="@mipmap/ic_withdraw_deposit"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="提现"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--零钱明细-->
+            <include
+                android:id="@+id/layout_change_details"
+                layout="@layout/layout_pay_main_item" />
+
+            <View style="@style/app_line" />
+
+            <!--红包明细-->
+            <include
+                android:id="@+id/viewMyRedEnvelope"
+                layout="@layout/layout_pay_main_item" />
+
+
+<!--            <View style="@style/app_line" />-->
+
+            <!--账户信息-->
+<!--            <include-->
+<!--                android:id="@+id/viewAccountInfo"-->
+<!--                layout="@layout/layout_pay_main_item"-->
+<!--                android:visibility="gone"/>-->
+
+            <View style="@style/app_line" />
+
+            <!--实名认证-->
+            <include
+                android:id="@+id/layout_auth_realname"
+                layout="@layout/layout_pay_main_item" />
+
+            <View style="@style/app_line" />
+
+            <!--银行卡设置-->
+            <include
+                android:id="@+id/viewBankSetting"
+                layout="@layout/layout_pay_main_item" />
+
+            <View style="@style/app_line" />
+
+
+            <!--密码管理-->
+            <include
+                android:id="@+id/viewSettingOfPsw"
+                layout="@layout/layout_pay_main_item" />
+
+        </LinearLayout>
+    </LinearLayout>
+</net.cb.cb.library.view.HeadView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

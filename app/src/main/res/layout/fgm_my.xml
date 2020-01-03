@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <net.cb.cb.library.view.ActionbarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:actionbar_showIconLeft="false"
+        app:actionbar_txtTitle="我" />
+
+    <LinearLayout style="@style/app_layout_list1">
+
+        <LinearLayout
+            android:id="@+id/view_head"
+            style="@style/app_layout_list1_item"
+            android:layout_height="89dp">
+
+            <ImageView
+                android:id="@+id/img_head"
+                style="@style/app_img_head"
+                android:layout_width="63dp"
+                android:layout_height="63dp"
+                android:layout_marginRight="@dimen/app_margin_item" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_name"
+                    style="@style/app_txt_title_2"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_info"
+                    style="@style/app_txt_content_1"
+                    android:layout_marginTop="5dp"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_btn_goto" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/app_layout_list2">
+
+        <LinearLayout
+            android:id="@+id/view_scan_qrcode"
+            style="@style/app_layout_list2_item">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:src="@mipmap/ic_scan_qrcode" />
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:layout_weight="1"
+                android:text="扫一扫" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_btn_goto" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_qr"
+            style="@style/app_layout_list2_item">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:src="@mipmap/ic_my_qr" />
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:layout_weight="1"
+                android:text="我的二维码" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_btn_goto" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        style="@style/app_layout_list2"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/view_money"
+            style="@style/app_layout_list2_item"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:src="@mipmap/ic_my_money" />
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:layout_weight="1"
+                android:text="零钱红包" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_btn_goto" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_wallet"
+            style="@style/app_layout_list2_item">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:src="@mipmap/ic_zfb_hb" />
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:layout_weight="1"
+                android:text="云红包" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_btn_goto" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        style="@style/app_layout_list2"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/view_collection"
+            style="@style/app_layout_list2_item">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:src="@mipmap/ic_my_coll" />
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:layout_weight="1"
+                android:text="收藏" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_btn_goto" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout style="@style/app_layout_list2">
+
+        <LinearLayout
+            android:id="@+id/view_setting"
+            style="@style/app_layout_list2_item">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:src="@mipmap/ic_my_setting" />
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:text="通用设置" />
+
+
+            <TextView
+                android:id="@+id/tv_new_versions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/shape_new"
+                android:text="new"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_btn_goto" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_help"
+            style="@style/app_layout_list2_item">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:src="@mipmap/ic_my_help" />
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:layout_weight="1"
+                android:text="帮助" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_btn_goto" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/app_layout_list2">
+
+        <LinearLayout
+            android:id="@+id/view_service"
+            style="@style/app_layout_list2_item">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:src="@mipmap/ic_cx_server" />
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:text="常信客服" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

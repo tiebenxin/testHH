@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="277dp"
+    android:layout_height="160dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/shape_13radius_solid_ffffff">
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="26dp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="26dp"
+        android:paddingRight="20dp"
+        android:src="@mipmap/ic_close_one"/>
+
+    <TextView
+        android:id="@+id/temp_text_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/c_000000"
+        android:textSize="14sp"
+        android:layout_marginTop="23dp"
+        android:layout_toRightOf="@+id/iv_close"
+        android:text="请输入支付密码"/>
+    <TextView
+        android:id="@+id/temp_text_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/c_000000"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/temp_text_one"
+        android:text="移除银行卡"/>
+
+
+    <com.hm.cxpay.widget.PswView
+        android:id="@+id/psw_view"
+        android:layout_below="@+id/temp_text_two"
+        android:layout_width="239dp"
+        android:layout_height="34dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:background="@null"
+        android:cursorVisible="false"
+        android:inputType="number"
+        android:maxLength="6"
+        android:focusable="true"
+        app:passwordLength="6"
+        app:borderWidth="1dp"
+        app:borderColor="@color/c_f0f0f0"
+        app:borderRadius="5dp"
+        app:passwordWidth="5dp"
+        app:passwordColor="@color/c_000000"/>
+
+
+
+
+</RelativeLayout>

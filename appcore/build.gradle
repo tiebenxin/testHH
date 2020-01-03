@@ -1,0 +1,167 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+    sourceSets {
+        main() {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters "x86", "armeabi", "armeabi-v7a", 'arm64-v8a'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: "com.yanlong.im",
+                JPUSH_APPKEY : "3ed4e6a14a17e0be39b20cb5", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+
+                XIAOMI_APPKEY: "MI‐5411801194485",//小米平台注册的appkey
+                XIAOMI_APPID : "MI‐2882303761518011485",//小米平台注册的appid
+
+                HUAWEI_APPID : "101160415", //华为
+
+                MEIZU_APPKEY : "MZ‐e5795872af0d4c77945971a05ad7ad1c",//魅族平台注册的appkey
+                MEIZU_APPID  : "MZ‐1007742",//魅族平台注册的appid
+
+                OPPO_APPKEY : "OP‐5ea85e3c99144bb4a42334cac5d08855", // OPPO平台注册的appkey
+                OPPO_APPID : "OP‐30161375", // OPPO平台注册的appid
+                OPPO_APPSECRET: "OP‐4222a724a70949a1b6db4cdda5c06571",//OPPO平台注册的appsecret
+
+                VIVO_APPKEY   : "f1940b91-4b0d-4c5c-914e-657045438bc4", // VIVO平台注册的appkey
+                VIVO_APPID    : "15217", // VIVO平台注册的appid
+        ]
+
+    }
+
+    buildscript {
+        repositories {
+            google()
+            jcenter()
+        }
+    }
+
+    allprojects {
+        repositories {
+            google()
+            jcenter()
+            mavenCentral()
+        }
+    }
+
+    // 解决重复引用问题
+    packagingOptions {
+        exclude 'AndroidManifest.xml'
+        exclude 'R.txt'
+        exclude 'res/values/values.xml'
+        exclude 'classes.jar'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+
+        pre {
+
+        }
+    }
+}
+
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api fileTree(include: ['*.aar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    api 'com.android.support:multidex:1.0.3'
+    //基础库
+    api 'com.android.support:support-v4:28.+'
+    api 'com.android.support:design:28.+'
+    api 'com.android.support:palette-v7:28.+'
+    api 'com.android.support:cardview-v7:28.+'
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
+    //网络库
+//    api 'com.squareup.okhttp3:okhttp:3.4.2'
+//    api 'com.squareup.okhttp3:logging-interceptor:3.4.2'
+
+    //    // okhttp
+    api "com.squareup.okhttp3:okhttp:$rootProject.ext.okhttpVersion"
+    api "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.okhttpVersion"
+
+//    api 'com.squareup.retrofit2:retrofit:2.1.0'
+//    api 'com.squareup.retrofit2:converter-gson:2.1.0'
+    api "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitVersion"
+    api "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofitVersion"
+    api "com.squareup.retrofit2:adapter-rxjava2:$rootProject.ext.retrofitVersion"
+
+    api 'com.google.code.gson:gson:2.2.4'
+    api 'com.google.protobuf:protobuf-java:3.5.1'
+    api 'com.google.protobuf:protoc:3.5.1'
+    api 'com.google.protobuf:protobuf-java-util:3.5.1'
+    api 'me.kareluo.ui:popmenu:1.1.0'
+    //上传
+    api 'com.aliyun.dpa:oss-android-sdk:+'
+
+    //胶水
+
+    //    api 'io.reactivex.rxjava2:rxjava:2.1.1'
+
+    //    api 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    api 'io.reactivex.rxjava2:rxjava:2.1.1'
+    api 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    api 'org.greenrobot:eventbus:3.0.0'
+    //图片
+    api project(':picture_library')
+    // Bugly
+    api 'com.tencent.bugly:crashreport:latest.release'
+    api 'com.tencent.bugly:nativecrashreport:latest.release'
+
+    //常用控件
+    api 'com.kyleduo.switchbutton:library:2.0.0'
+    api 'com.baoyz.pullrefreshlayout:library:1.2.0'
+    api 'com.contrarywind:Android-PickerView:4.1.9'
+    //下拉刷新
+    api 'com.android.support.constraint:constraint-layout:1.1.3'
+    //滑动删除
+    api 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
+    api 'androidx.annotation:annotation:1.0.0'
+    api 'com.android.support:support-emoji:28.+'
+    api 'com.android.support:support-emoji-appcompat:28.+'
+    api 'com.android.support:support-emoji-bundled:28.+'
+    // 拼音库、支持姓名多音字、比pinyin4j效率高
+    //    api 'com.github.promeg:tinypinyin:2.0.3' // TinyPinyin核心包，约80KB
+    //    api 'com.github.promeg:tinypinyin-lexicons-android-cncity:2.0.3' // 可选，适用于Android的中国地区词典
+    //友盟
+    api 'com.umeng.umsdk:common:+'
+    api 'com.umeng.umsdk:utdid:+'
+    api 'com.umeng.umsdk:analytics:+'
+    api 'com.umeng.sdk:share-wechat:6.9.1'
+    api 'org.jsoup:jsoup:1.12.1'
+    //极光推送
+    api 'cn.jiguang.sdk:jpush:3.3.8'
+    api 'cn.jiguang.sdk:jcore:2.1.4'
+    api 'cn.jiguang.sdk.plugin:xiaomi:3.3.8'
+    // 小米
+    api 'cn.jiguang.sdk.plugin:huawei:3.3.8'
+    //华为
+    api 'cn.jiguang.sdk.plugin:meizu:3.3.8'
+    //魅族
+    api 'cn.jiguang.sdk.plugin:oppo:3.3.8'
+    // oppo
+    api 'cn.jiguang.sdk.plugin:vivo:3.3.8'
+    //vivo
+    implementation files('libs/pinyin4j-2.5.0.jar')
+}

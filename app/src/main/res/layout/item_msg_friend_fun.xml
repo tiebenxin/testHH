@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/app_layout_list2_without_divider"
+        android:layout_marginTop="0dp">
+
+        <LinearLayout
+            android:id="@+id/view_add"
+            style="@style/app_layout_list2_item">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:src="@mipmap/ic_msg_friend_new" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/app_txt_title_2"
+                        android:text="新的申请" />
+
+                    <net.cb.cb.library.view.StrikeButton
+                        android:id="@+id/sb_apply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:strike_icon_res="@color/transparent"
+                        app:strike_type="small" />
+
+                </LinearLayout>
+
+                <View style="@style/app_line" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_add_friend"
+            style="@style/app_layout_list2_item">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:src="@mipmap/ic_msg_friend_add_item" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/app_txt_title_2"
+                        android:text="添加好友" />
+                </LinearLayout>
+
+                <View style="@style/app_line" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_match"
+            style="@style/app_layout_list2_item">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:src="@mipmap/ic_msg_friend_mach" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/app_txt_title_2"
+                        android:text="手机通讯录匹配" />
+
+                </LinearLayout>
+
+                <View style="@style/app_line" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_group"
+            style="@style/app_layout_list2_item">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:src="@mipmap/ic_msg_friend_group" />
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:text="已保存的群聊" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/app_line" />
+</LinearLayout>

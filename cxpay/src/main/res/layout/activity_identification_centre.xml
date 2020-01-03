@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <net.cb.cb.library.view.HeadView
+        android:id="@+id/headView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:headview_title="实名认证">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/app_txt_content_1"
+                android:layout_marginLeft="@dimen/app_margin_main"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="请填写您本人信息，实名认证完成后不可修改"
+                android:textSize="12sp" />
+
+
+            <LinearLayout style="@style/app_layout_list2_item">
+
+                <TextView
+                    style="@style/app_txt_title_2"
+                    android:layout_width="wrap_content"
+                    android:text="真实姓名" />
+
+                <!--            <TextView-->
+                <!--                android:id="@+id/tv_name"-->
+                <!--                style="@style/app_txt_content_1"/>-->
+                <net.cb.cb.library.view.ClearEditText
+                    android:id="@+id/et_name"
+                    style="@style/app_txt_title_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请填写真实姓名"
+                    android:textColorHint="@color/gray_300"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+
+            </LinearLayout>
+
+            <View style="@style/app_line" />
+
+            <LinearLayout style="@style/app_layout_list2_item">
+
+                <TextView
+                    style="@style/app_txt_title_2"
+                    android:layout_width="wrap_content"
+                    android:text="证件类型" />
+
+                <TextView
+                    android:id="@+id/tv_id_type"
+                    style="@style/app_txt_title_2"
+                    android:layout_marginLeft="15dp"
+                    android:text="身份证" />
+
+            </LinearLayout>
+
+            <View style="@style/app_line" />
+
+            <LinearLayout
+                style="@style/app_layout_list2_item"
+                android:layout_height="53dp">
+
+                <TextView
+                    style="@style/app_txt_title_2"
+                    android:layout_width="wrap_content"
+                    android:text="证件号码" />
+
+                <net.cb.cb.library.view.ClearEditText
+                    android:id="@+id/et_idcard"
+                    style="@style/app_txt_title_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请填写证件号码"
+                    android:textColorHint="@color/gray_300"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_next"
+                android:layout_width="322dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:text="下一步"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:background="@drawable/shape_5radius_solid_32b053"
+                android:textColor="@color/white"/>
+
+
+        </LinearLayout>
+
+    </net.cb.cb.library.view.HeadView>
+</layout>

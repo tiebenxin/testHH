@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:headview_title="新的申请">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <net.cb.cb.library.view.MultiListView
+            android:id="@+id/mtListView"
+            android:layout_marginTop="@dimen/app_margin_item_top"
+            android:layout_width="match_parent"
+            android:weightSum="1"
+            android:layout_height="match_parent"/>
+        
+       
+    </LinearLayout>
+</net.cb.cb.library.view.HeadView>

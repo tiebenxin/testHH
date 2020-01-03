@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/app_txt_title_1"
+            android:text="测试列表1 通讯录" />
+
+        <LinearLayout style="@style/app_layout_list1">
+
+            <LinearLayout style="@style/app_layout_list1_item" >
+
+                <TextView
+                    style="@style/app_txt_content_1"
+                    android:text="测试123" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/app_layout_list1_item">
+
+                <TextView
+                    style="@style/app_txt_content_1"
+                    android:text="测试123" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/app_layout_list1_item">
+
+                <TextView
+                    style="@style/app_txt_content_1"
+                    android:text="测试123" />
+            </LinearLayout>
+        </LinearLayout >
+
+        <TextView
+            style="@style/app_txt_title_1"
+            android:text="测试列表2 设置列表" />
+
+     <LinearLayout style="@style/app_layout_list2">
+
+            <LinearLayout style="@style/app_layout_list2_item">
+
+                <TextView
+                    style="@style/app_txt_content_1"
+                    android:text="测试123" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/app_layout_list2_item">
+
+                <TextView
+                    style="@style/app_txt_content_1"
+                    android:text="测试123" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/app_layout_list2_item">
+
+                <TextView
+                    style="@style/app_txt_content_1"
+                    android:text="测试123" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout style="@style/app_layout_list2">
+
+            <LinearLayout style="@style/app_layout_list2_item">
+
+                <TextView
+                    style="@style/app_txt_content_1"
+                    android:text="测试123" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

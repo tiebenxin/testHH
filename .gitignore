@@ -1,0 +1,13 @@
+/build
+*.iml
+.idea/*
+captures/*
+out
+local.properties
+.gradle/*
+*/*.iml
+*/*/*.iml
+sd.jar
+send.bat
+.gradle
+.idea

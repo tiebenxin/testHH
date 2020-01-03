@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.yanlong.im.wight.avatar.MultiImageView
+        android:id="@+id/img_head"
+        style="@style/app_img_head"
+        android:layout_marginTop="@dimen/app_margin_bottom"
+        android:layout_marginRight="@dimen/app_margin_bottom"
+        android:background="@drawable/bg_head_gray_shape"
+        android:layout_gravity="center|left"/>
+
+</LinearLayout>

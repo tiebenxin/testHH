@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:headview_title="添加朋友">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/view_search"-->
+<!--            style="@style/app_layout_list2_item"-->
+<!--            android:layout_marginTop="@dimen/app_margin_item_top"-->
+<!--            android:paddingRight="0dp">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginRight="12dp"-->
+<!--                android:src="@mipmap/ic_msg_search" />-->
+
+<!--            <TextView-->
+<!--                style="@style/app_edt1"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:layout_marginRight="@dimen/app_margin_main"-->
+<!--                android:hint="搜索" />-->
+
+<!--        </LinearLayout>-->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:background="@color/white"
+            >
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:id="@+id/view_search"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/shape_search_bg"
+                style="@style/app_layout_list2_item_search"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:src="@mipmap/ic_msg_search" />
+
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/edt_search"
+                    style="@style/app_edt1"
+                    android:enabled="false"
+                    android:visibility="visible"
+                    android:layout_marginRight="@dimen/app_margin_main"
+                    android:hint="输入常信号/手机号搜索联系人" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+
+        <LinearLayout style="@style/app_layout_list2">
+
+            <LinearLayout
+                android:id="@+id/view_match"
+                style="@style/app_layout_list2_item">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/app_margin_item"
+                    android:src="@mipmap/ic_msg_friend_mach" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/app_txt_title_2"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:layout_weight="1"
+                        android:text="手机通讯录匹配" />
+
+                    <TextView
+                        style="@style/app_txt_content_1"
+                        android:text="匹配手机通讯中的好友" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_btn_goto" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_qr"
+                style="@style/app_layout_list2_item">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/app_margin_item"
+                    android:src="@mipmap/ic_friend_qr" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/app_txt_title_2"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:layout_weight="1"
+                        android:text="扫一扫" />
+
+                    <TextView
+                        style="@style/app_txt_content_1"
+                        android:text="扫描二维码" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_btn_goto" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_wc"
+                style="@style/app_layout_list2_item">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/app_margin_item"
+                    android:src="@mipmap/ic_friend_wechat" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/app_txt_title_2"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:layout_weight="1"
+                        android:text="邀请微信好友" />
+
+                    <TextView
+                        style="@style/app_txt_content_1"
+                        android:text="邀请微信中的朋友" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_btn_goto" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</net.cb.cb.library.view.HeadView>

@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="277dp"
+    android:layout_height="155dp"
+    android:background="@drawable/shape_13radius_solid_ffffff">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:text="温馨提示"
+        android:textColor="@color/c_000000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="您还没有绑定手机号码\n请先绑定后再进行操作 "
+        android:textColor="@color/c_000000"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/line_one"
+        style="@style/payword_line"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/tv_content" />
+
+    <TextView
+        android:id="@+id/tv_bind"
+        android:layout_width="138dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/line_one"
+        android:gravity="center"
+        android:text="去绑定"
+        android:textColor="@color/c_32b053"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/line_two"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line_one"
+        android:layout_toRightOf="@+id/tv_bind"
+        android:background="@color/c_f0f0f0" />
+
+    <TextView
+        android:id="@+id/tv_exit"
+        android:layout_width="138dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/line_one"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/line_two"
+        android:text="取消"
+        android:textColor="@color/c_828282"
+        android:textSize="16sp"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="277dp"
+    android:layout_height="139dp"
+    android:background="@drawable/shape_13radius_solid_ffffff">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="30dp"
+        android:text="支付密码错误，请重试"
+        android:textColor="@color/c_000000"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/line_one"
+        style="@style/payword_line"
+        android:layout_below="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_try_again"
+        android:layout_width="138dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/line_one"
+        android:gravity="center"
+        android:text="重试"
+        android:textColor="@color/c_828282"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/line_two"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line_one"
+        android:layout_toRightOf="@+id/tv_try_again"
+        android:background="@color/c_f0f0f0" />
+
+    <TextView
+        android:id="@+id/tv_forget_psw"
+        android:layout_width="138dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/line_one"
+        android:layout_toRightOf="@+id/line_two"
+        android:gravity="center"
+        android:text="忘记密码"
+        android:textColor="@color/c_32b053"
+        android:textSize="16sp" />
+
+
+</RelativeLayout>

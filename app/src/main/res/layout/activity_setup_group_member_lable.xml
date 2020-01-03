@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <net.cb.cb.library.view.HeadView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/headView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:headview_title="设置标签">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设置群成员标签"
+                    android:textSize="@dimen/dimen_12"
+                    android:textColor="@color/color_9e9"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                                <EditText
+                                    android:id="@+id/edit_input_lable"
+                                    android:layout_width="match_parent"
+                                    android:singleLine="true"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/transparent"
+                                    android:gravity="bottom"
+                                    android:textSize="14sp"
+                                    android:maxLength="50"
+                                    android:textColorHint="@color/black"
+                                    android:hint="请输入标签"/>
+
+                                <View style="@style/app_line"
+                                    android:background="@color/green_500"/>
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btn_add"
+                            style="@style/app_btn_green"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:textSize="13sp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="@dimen/app_margin_main"
+                            android:layout_marginRight="@dimen/app_margin_main"
+                            android:text="添加" />
+                </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="标签仅群主和管理员可见"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:textSize="@dimen/dimen_12"
+                android:textColor="@color/color_9e9"/>
+
+            <TextView
+                android:id="@+id/txt_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前标签：李四的朋友"
+                android:layout_marginTop="20dp"
+                android:textSize="@dimen/dimen_12"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+    </net.cb.cb.library.view.HeadView>
+</layout>

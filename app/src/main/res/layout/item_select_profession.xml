@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/app_layout_list2_item">
+
+        <TextView
+            android:id="@+id/tv_profession"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            style="@style/app_txt_title_2"
+            android:text="党政机关人员"/>
+
+        <ImageView
+            android:id="@+id/iv_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bg_cheack_green_e"/>
+
+    </LinearLayout>
+
+    <View
+        style="@style/app_line"/>
+
+</LinearLayout>

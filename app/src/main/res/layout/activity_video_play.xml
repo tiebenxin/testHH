@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    >
+
+    <SurfaceView
+        android:id="@+id/textureView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"/>
+    <!-- 处理默认进来黑屏问题-->
+    <ImageView
+        android:id="@+id/img_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <ImageView
+        android:id="@+id/activity_video_big_con"
+        android:layout_width="77dp"
+        android:layout_height="77dp"
+        android:clickable="true"
+        android:background="@mipmap/video_play_play"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:visibility="invisible"
+        />
+
+    <ImageView
+        android:id="@+id/img_progress"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:clickable="true"
+        android:background="@mipmap/img_video_load"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:visibility="visible"/>
+
+
+    <RelativeLayout
+        android:id="@+id/activity_video_rel_con"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/activity_video_img_close"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginLeft="25dp"
+            android:clickable="true"
+            android:background="@mipmap/video_play_back"
+            />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_video_play_con"
+                android:layout_width="343dp"
+                android:layout_height="38dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="94dp"
+                android:background="#80000000">
+
+                <ImageView
+                    android:id="@+id/activity_video_img_con"
+                    android:layout_width="18dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/video_play_con_pause"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="13dp"
+                    android:clickable="true"
+                    />
+                <TextView
+                    android:id="@+id/activity_video_current_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="00:00"
+                    android:textColor="#fff"
+                    android:textSize="10sp"
+                    android:layout_marginLeft="38dp"
+                    />
+                <SeekBar
+                    android:id="@+id/activity_video_seek"
+                    android:layout_width="205dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="78dp"
+                    android:thumb="@mipmap/video_play_round"
+                    android:maxHeight="2dp"
+                    android:progressDrawable="@drawable/video_seek_bg"
+                    />
+                <TextView
+                    android:id="@+id/activity_video_count_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="00:00"
+                    android:textColor="#fff"
+                    android:textSize="10sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="14dp"
+                    />
+            </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

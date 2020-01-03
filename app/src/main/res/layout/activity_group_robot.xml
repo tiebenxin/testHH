@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    app:headview_title="我的群助手">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/view_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/app_margin_main"
+                android:paddingRight="@dimen/app_margin_main">
+
+                <ImageView
+                    android:id="@+id/img_info_icon"
+                    style="@style/app_img"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+
+                <TextView
+                    android:id="@+id/txt_info_title"
+                    style="@style/app_txt_title_2"
+                    android:layout_marginLeft="@dimen/app_margin_item"
+                    android:layout_weight="1"
+                    android:text="" />
+
+                <Button
+                    android:id="@+id/btn_info_add"
+                    style="@style/app_btn_green_s"
+                    android:layout_marginLeft="@dimen/app_margin_item"
+                    android:text="添加" />
+
+                <Button
+                    android:id="@+id/btn_info_del"
+                    style="@style/app_btn_gray_s"
+                    android:layout_marginLeft="@dimen/app_margin_item"
+                    android:text="删除" />
+
+
+                <Button
+                    android:id="@+id/btn_info_change"
+                    style="@style/app_btn_green_s"
+                    android:layout_marginLeft="@dimen/app_margin_item"
+                    android:text="更换" />
+
+
+            </LinearLayout>
+            <View style="@style/app_line" />
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+
+
+                    <TextView
+                        android:id="@+id/txt_info_more"
+                        style="@style/app_txt_content_1"
+                        android:paddingLeft="@dimen/app_margin_main"
+                        android:paddingTop="@dimen/app_margin_item"
+                        android:paddingRight="@dimen/app_margin_main"
+                        android:paddingBottom="@dimen/app_margin_item"
+                        android:singleLine="false"
+                        android:text="xxxxxxxxxxxxx" />
+
+                    <View style="@style/app_line" />
+
+                    <TextView
+                        android:id="@+id/txt_info_note"
+                        style="@style/app_txt_content_1"
+                        android:paddingLeft="@dimen/app_margin_main"
+                        android:paddingTop="@dimen/app_margin_item"
+                        android:paddingRight="@dimen/app_margin_main"
+                        android:paddingBottom="@dimen/app_margin_item"
+                        android:singleLine="false"
+                        android:text="xxxxxxxxxxxxx" />
+
+                </LinearLayout>
+
+
+            </android.support.v4.widget.NestedScrollView>
+
+            <Button
+                android:id="@+id/btn_config"
+                style="@style/app_btn_green"
+                android:layout_margin="100dp"
+                android:text="配置群助手" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/view_add"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_robot_add_icon" />
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="20dp"
+                android:text="你还没有添加群助手"
+                android:textColor="@color/gray_300" />
+
+            <Button
+                android:id="@+id/btn_add"
+                style="@style/app_btn_green_s"
+                android:text="去添加" />
+
+        </LinearLayout>
+    </LinearLayout>
+</net.cb.cb.library.view.HeadView>

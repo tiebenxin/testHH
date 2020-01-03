@@ -1,0 +1,172 @@
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:headview_title="提现详情">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="55dp"
+            android:layout_marginBottom="29dp"
+            android:src="@mipmap/ic_recharge_success" />
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_one"
+            android:layout_centerHorizontal="true"
+            android:text="提现申请已提交"
+            android:textColor="@color/c_000000"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:id="@+id/layout_one"
+            android:layout_below="@+id/tv_one"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_marginTop="39dp"
+            android:layout_height="50dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/c_353535"
+                android:layout_marginLeft="13dp"
+                android:layout_centerVertical="true"
+                android:text="提现银行"/>
+            <TextView
+                android:id="@+id/tv_bank_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/c_000000"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text=""/>
+            <View style="@style/money_change_line"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_two"
+            android:layout_below="@+id/layout_one"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="50dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/c_353535"
+                android:layout_marginLeft="13dp"
+                android:layout_centerVertical="true"
+                android:text="提现金额"/>
+            <TextView
+                android:id="@+id/tv_withdraw_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/c_000000"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text=""/>
+            <View style="@style/money_change_line"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_three"
+            android:layout_below="@+id/layout_two"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="50dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/c_353535"
+                android:layout_marginLeft="13dp"
+                android:layout_centerVertical="true"
+                android:text="服务费　"/>
+            <TextView
+                android:id="@+id/tv_service_fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/c_000000"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text=""/>
+            <View style="@style/money_change_line"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_four"
+            android:layout_below="@+id/layout_three"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="50dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/c_353535"
+                android:layout_marginLeft="13dp"
+                android:layout_centerVertical="true"
+                android:text="到账金额"/>
+            <TextView
+                android:id="@+id/tv_get_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/c_000000"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text=""/>
+            <View style="@style/money_change_line"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+
+
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="144dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/layout_four"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/shape_5radius_solid_32b053"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="提现失败后，资金将原路返回您的账户"
+            android:textColor="@color/c_868686"
+            android:layout_below="@+id/tv_submit"
+            android:layout_marginTop="20dp"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+</net.cb.cb.library.view.HeadView>

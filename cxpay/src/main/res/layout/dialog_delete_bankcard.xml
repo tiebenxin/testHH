@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_delete_bankcard"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="移除银行卡"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/c_32b053"/>
+    <View
+        style="@style/money_change_line" />
+    <TextView
+        android:id="@+id/tv_cancle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="取消"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/c_353535"/>
+
+
+</LinearLayout>

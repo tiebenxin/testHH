@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <net.cb.cb.library.view.HeadView
+        android:id="@+id/headView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:headview_title="银行卡设置">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/ll_add_card"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/tv_add_bank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:drawableLeft="@mipmap/ic_add_bank"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="添加银行卡"
+                    android:textColor="#45a25e"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </net.cb.cb.library.view.HeadView>
+</layout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <net.cb.cb.library.view.HeadView
+        android:id="@+id/headView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:headview_title="银行卡详情">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="30dp"
+                android:paddingBottom="30dp">
+
+
+                <ImageView
+                    android:id="@+id/iv_icon"
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_bank_zs" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/app_layout_list2_item">
+
+                <TextView
+                    style="@style/app_txt_title_2"
+                    android:layout_width="100dp"
+                    android:text="银行" />
+
+                <TextView
+                    android:id="@+id/tv_bank_name"
+                    style="@style/app_txt_title_2"
+                    android:layout_marginLeft="15dp"
+                    android:text="招商银行" />
+
+            </LinearLayout>
+
+            <View style="@style/app_line" />
+
+
+            <LinearLayout style="@style/app_layout_list2_item">
+
+                <TextView
+                    style="@style/app_txt_title_2"
+                    android:layout_width="100dp"
+                    android:text="卡类型" />
+
+                <TextView
+                    android:id="@+id/tv_bank_type"
+                    style="@style/app_txt_title_2"
+                    android:layout_marginLeft="15dp"
+                    android:text="借记卡" />
+
+            </LinearLayout>
+            <View style="@style/app_line" />
+
+            <LinearLayout style="@style/app_layout_list2_item">
+
+                <TextView
+                    style="@style/app_txt_title_2"
+                    android:layout_width="100dp"
+                    android:text="卡号" />
+
+                <TextView
+                    android:id="@+id/tv_bank_num"
+                    style="@style/app_txt_title_2"
+                    android:layout_marginLeft="15dp"
+                    android:text="****" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </net.cb.cb.library.view.HeadView>
+</layout>

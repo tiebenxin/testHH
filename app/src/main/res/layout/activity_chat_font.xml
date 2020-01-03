@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:headview_title="设置字体大小">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/app_margin_main"
+            android:paddingRight="@dimen/app_margin_main">
+
+            <LinearLayout
+
+                android:id="@+id/view_me"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal"
+                android:paddingLeft="57dp">
+
+
+                <LinearLayout
+                    android:id="@+id/view_me_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_weight="1"
+                    android:gravity="right">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txt_me_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_chat_me"
+                        android:text="预览字体大小。"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_me_head"
+                    style="@style/app_img_head"
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:layout_marginLeft="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_ot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:paddingRight="57dp">
+
+                <ImageView
+                    android:id="@+id/img_ot_head"
+                    style="@style/app_img_head"
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:layout_marginRight="10dp" />
+
+                <LinearLayout
+                    android:id="@+id/view_ot_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txt_ot_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_chat_other"
+                        android:text="拖动下面的滑块，可设置字体大小。"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="152dp"
+            android:background="@color/white"
+            android:gravity="center">
+
+
+            <net.cb.cb.library.view.FontSizeView
+                android:id="@+id/seekBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@color/white"
+                app:circleRadius="10dp"
+                app:lineColor="@color/gray_300"
+                app:standerSize="16"/>
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+</net.cb.cb.library.view.HeadView>

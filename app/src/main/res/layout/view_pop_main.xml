@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/app_layout_list2" android:layout_width="120dp">
+
+    <LinearLayout
+        android:id="@+id/view_pop_group"
+
+        style="@style/app_layout_list2_item"
+        android:background="@color/transparent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/app_margin_item"
+            android:src="@mipmap/ic_pop_msg" />
+
+        <TextView
+            style="@style/app_txt_title_3"
+            android:text="发起群聊"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <View
+        style="@style/app_line"
+        android:background="#33dddddd" />
+
+    <LinearLayout
+        android:id="@+id/view_pop_add"
+        style="@style/app_layout_list2_item"
+        android:background="@color/transparent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/app_margin_item"
+            android:src="@mipmap/ic_pop_add" />
+
+        <TextView
+            style="@style/app_txt_title_3"
+            android:text="添加朋友"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <View
+        style="@style/app_line"
+        android:background="#33dddddd" />
+
+    <LinearLayout
+        android:id="@+id/view_pop_qr"
+        style="@style/app_layout_list2_item"
+        android:background="@color/transparent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/app_margin_item"
+            android:src="@mipmap/ic_pop_qr" />
+
+        <TextView
+            style="@style/app_txt_title_3"
+            android:text="扫一扫"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <View
+        style="@style/app_line"
+        android:background="#33dddddd" />
+
+    <LinearLayout
+        android:id="@+id/view_pop_help"
+        style="@style/app_layout_list2_item"
+        android:background="@color/transparent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/app_margin_item"
+            android:src="@mipmap/ic_pop_info" />
+
+        <TextView
+            style="@style/app_txt_title_3"
+            android:text="帮助"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">cxpay</string>
+    <string name="my_red_envelope">红包明细</string>
+    <string name="change_details">零钱明细</string>
+    <string name="account_info">账户信息</string>
+    <string name="auth_realname">实名认证</string>
+    <string name="record_of_transaction">交易记录</string>
+    <string name="settings_of_bank">我的银行卡</string>
+    <string name="settings_of_psw">支付密码管理</string>
+    <string name="common_net_error_default">遇到错误了，请稍后再试</string>
+    <string name="max_amount_notice">单个红包金额不能超过200元</string>
+    <string name="min_amount_notice">单个红包金额不可低于0.01元</string>
+    <string name="more_than_member_count">红包个数不能超过群成员总数</string>
+    <string name="auto_back_notice">未领取的红包将于24小时后自动退回</string>
+    <string name="arrive_to_account_notice">你发出的零钱红包账户</string>
+    <string name="range_of_receive">对方可领的金额为0.01~200元</string>
+    <string name="send_fail_note">发送红包失败。如已扣款，将会在24小时内自动退回您的零钱账户</string>
+    <string name="group_max_amount_notice">每个红包平均金额不能高于200元</string>
+    <string name="total_max_amount_notice">单次红包总金额不能超过5000元</string>
+
+    <string name="total_transfer_max_amount_notice">单次转账金额不能超过1000元</string>
+    <string name="transfer_min_amount_notice">单次转账金额不能低于0.01元</string>
+    <string name="transfer_fail_note">转账失败。如已扣款，将会在24小时内自动退回您的零钱账户</string>
+
+
+</resources>

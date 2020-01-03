@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <net.cb.cb.library.view.HeadView
+        android:id="@+id/headView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:headview_title="添加银行卡">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout style="@style/app_layout_list2_item">
+
+                <TextView
+                    style="@style/app_txt_title_2"
+                    android:layout_width="100dp"
+                    android:text="银行" />
+
+                <TextView
+                    android:id="@+id/tv_bank_name"
+                    style="@style/app_txt_title_2"
+                    android:layout_marginLeft="15dp"
+                    android:text="中国银行" />
+
+            </LinearLayout>
+
+            <View style="@style/money_change_line"
+                android:layout_marginLeft="20dp"/>
+
+            <LinearLayout style="@style/app_layout_list2_item">
+
+                <TextView
+                    style="@style/app_txt_title_2"
+                    android:layout_width="100dp"
+                    android:text="卡类型" />
+
+                <TextView
+                    android:id="@+id/tv_bank_type"
+                    style="@style/app_txt_title_2"
+                    android:layout_marginLeft="15dp"
+                    android:text="储蓄卡" />
+
+
+            </LinearLayout>
+            <View style="@style/money_change_line"
+                android:layout_marginLeft="20dp"/>
+
+            <LinearLayout style="@style/app_layout_list2_item">
+
+                <TextView
+                    style="@style/app_txt_title_2"
+                    android:layout_width="100dp"
+                    android:text="卡号" />
+
+                <TextView
+                    android:id="@+id/tv_bank_num"
+                    style="@style/app_txt_title_2"
+                    android:layout_marginLeft="15dp"
+                    android:text="******" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                style="@style/app_layout_list2_item"
+                android:layout_marginTop="3dp">
+
+                <TextView
+                    style="@style/app_txt_title_2"
+                    android:layout_width="130dp"
+                    android:text="持卡人姓名" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    style="@style/app_txt_title_2"
+                    android:layout_marginLeft="15dp"
+                    android:text="**" />
+
+
+            </LinearLayout>
+            <View style="@style/money_change_line"
+                android:layout_marginLeft="20dp"/>
+
+            <LinearLayout style="@style/app_layout_list2_item">
+
+                <TextView
+                    style="@style/app_txt_title_2"
+                    android:layout_width="130dp"
+                    android:text="持卡人身份证号" />
+
+                <TextView
+                    android:id="@+id/tv_card_id"
+                    style="@style/app_txt_title_2"
+                    android:layout_marginLeft="15dp"
+                    android:text="**" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/app_layout_list2_item"
+                android:layout_marginTop="3dp">
+
+                <TextView
+                    style="@style/app_txt_title_2"
+                    android:layout_width="100dp"
+                    android:text="手机号" />
+
+                <net.cb.cb.library.view.ClearEditText
+                    android:id="@+id/et_phone_num"
+                    style="@style/app_txt_title_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:background="@null"
+                    android:hint="银行预留手机号"
+                    android:textColorHint="@color/gray_300"
+                    app:layout_constraintRight_toRightOf="parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:background="@color/transparent"
+                android:gravity="center_vertical|left"
+                android:paddingLeft="30dp">
+
+                <ImageView
+                    android:id="@+id/iv_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/selector_check_box" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="同意"
+                    android:textColor="#868686"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="《用户协议》"
+                    android:textColor="#374882"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_next"
+                android:layout_width="322dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:text="下一步"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:background="@drawable/shape_5radius_solid_32b053"
+                android:textColor="@color/white"/>
+
+
+        </LinearLayout>
+
+    </net.cb.cb.library.view.HeadView>
+</layout>

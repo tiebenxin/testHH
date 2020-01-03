@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout style="@style/app_layout_list2">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/app_txt_content_1"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/app_margin_main"
+            android:paddingRight="@dimen/app_margin_main"
+            android:text="设置群里的名字" />
+
+        <LinearLayout
+            style="@style/app_layout_list2_item"
+            android:layout_height="wrap_content"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp">
+
+            <EditText
+                android:id="@+id/ed_content"
+                style="@style/app_edt2"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_content"
+            style="@style/app_txt_content_1"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/app_margin_main"
+            android:paddingRight="@dimen/app_margin_main"
+            android:text="设置群里的名字" />
+
+    </LinearLayout>
+
+</net.cb.cb.library.view.HeadView>

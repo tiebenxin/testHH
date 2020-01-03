@@ -1,0 +1,1 @@
+include ':app', ':cxpay', 'appcore', ':picture_library', ':ucrop',':weiXinRecorded','nim_lib'

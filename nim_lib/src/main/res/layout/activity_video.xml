@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout_voice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_707"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/img_minimize"
+            android:layout_width="36dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/svg_img_minimize" />
+        <!-- 语音 -->
+        <LinearLayout
+            android:id="@+id/layout_audio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="73dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/img_head_portrait"
+                android:layout_width="71dp"
+                android:layout_height="71dp"
+                android:src="@mipmap/ic_img_def" />
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:text="刘德华"
+                android:textColor="@color/white"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/txt_wait_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/avchat_audio_invitation"
+                android:textColor="@color/color_d8d"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+            <!-- 消息提示 -->
+            <TextView
+                android:id="@+id/txt_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_wait_black_shape"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"
+                android:text="@string/avchat_peer_busy_ing"/>
+            <!-- 语音等待接听 -->
+            <LinearLayout
+                android:id="@+id/layout_voice_wait"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="57dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+                <ImageView
+                    android:id="@+id/img_cancle"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:src="@drawable/refuse_selector" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:text="@string/cancel"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <!-- 语音通话中 -->
+            <LinearLayout
+                android:id="@+id/layout_voice_ing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="57dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txt_life_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/layout_bottom"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="35dp"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/layout_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/cb_mute"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/mute_selector"
+                            android:button="@null"
+                            android:clickable="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="9dp"
+                            android:text="@string/avchat_mute"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img_hand_up"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:clickable="true"
+                            android:src="@drawable/refuse_selector" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="9dp"
+                            android:text="@string/avchat_refuse"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/cb_hands_free"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/hands_free_selector"
+                            android:button="@null"
+                            android:clickable="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="9dp"
+                            android:text="@string/avchat_handsfree"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 收到语音邀请 -->
+            <LinearLayout
+                android:id="@+id/layout_invitation_voice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="57dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_refuse"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:clickable="true"
+                        android:src="@drawable/refuse_selector" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:text="@string/avchat_reject"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_answer"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:clickable="true"
+                        android:src="@drawable/accept_selector" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:text="@string/avchat_pickup"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- 视频-->
+    <FrameLayout
+        android:id="@+id/avchat_surface_layout"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+        <!-- 大图 -->
+        <LinearLayout
+            android:id="@+id/large_size_preview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="horizontal" />
+
+        <View
+            android:id="@+id/touch_zone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/notificationLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:shadowColor="@color/video_call_peer_close_cameral_text_shadow"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:textColor="@color/video_call_peer_close_cameral_text_color"
+            android:textSize="16sp"
+            android:visibility="gone" />
+        <!-- 小图 -->
+        <FrameLayout
+            android:id="@+id/small_size_preview_layout"
+            android:layout_width="64dp"
+            android:layout_height="98dp"
+            android:layout_gravity="right|top"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="18dp">
+
+            <LinearLayout
+                android:id="@+id/small_size_preview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:orientation="vertical"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/smallSizePreviewCoverImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/img_minimize_video"
+            android:layout_width="36dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/svg_img_minimize" />
+
+        <!-- 语音通话中-->
+        <LinearLayout
+            android:id="@+id/layout_voide_ing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="57dp"
+            android:orientation="vertical">
+            <!-- 消息提示 -->
+            <TextView
+                android:id="@+id/txt_message_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_wait_black_shape"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"
+                android:text="@string/avchat_peer_busy_ing"/>
+
+            <TextView
+                android:id="@+id/txt_video_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/layout_bottom"
+                android:layout_gravity="center"
+                android:text=""
+                android:layout_marginBottom="35dp"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/cb_change_voice"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/svg_change_voice"
+                        android:button="@null"
+                        android:clickable="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:text="@string/avchat_switch_to_audio"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_hand_up2"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:clickable="true"
+                        android:src="@drawable/refuse_selector" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:text="@string/avchat_refuse"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/cb_convert_camera"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/switch_cameras_selector"
+                        android:button="@null"
+                        android:clickable="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:text="@string/avchat_switch_cameras"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

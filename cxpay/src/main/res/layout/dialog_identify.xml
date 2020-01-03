@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="277dp"
+    android:layout_height="139dp"
+    android:background="@drawable/shape_13radius_solid_ffffff">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/c_000000"
+        android:textSize="15sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="根据国家法律法规要求，你需要进行身份认证后，才能继续使用该功能。"/>
+
+    <View style="@style/payword_line"
+        android:id="@+id/line_one"
+        android:layout_below="@+id/tv_title"/>
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="138dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/line_one"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textColor="@color/c_828282"
+        android:text="取消"/>
+    <View
+        android:id="@+id/line_two"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/c_f0f0f0"
+        android:layout_toRightOf="@+id/tv_cancel"
+        android:layout_below="@+id/line_one"/>
+    <TextView
+        android:id="@+id/tv_identify"
+        android:layout_width="138dp"
+        android:layout_height="48dp"
+        android:layout_toRightOf="@+id/line_two"
+        android:layout_below="@+id/line_one"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textColor="@color/c_32b053"
+        android:text="去认证"/>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="230dp"
+    android:layout_height="363dp"
+    android:background="@mipmap/ic_update_bg"
+    android:orientation="vertical">
+
+    <!--旧版布局暂时隐藏-->
+<!--    <TextView-->
+<!--        android:id="@+id/txt_alert_title"-->
+<!--        style="@style/app_txt_title_2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_marginLeft="@dimen/app_margin_main"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:layout_marginRight="@dimen/app_margin_main"-->
+<!--        android:layout_marginBottom="15dp"-->
+<!--        android:gravity="center"-->
+<!--        android:visibility="visible"-->
+<!--        android:singleLine="false" />-->
+
+    <TextView
+        android:id="@+id/tv_version_number"
+        android:layout_width="38dp"
+        android:layout_height="14dp"
+        android:gravity="center"
+        android:layout_marginTop="105dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/shape_7radius_5acd54"
+        android:layout_gravity="right"
+        android:textSize="9sp"
+        android:visibility="invisible"
+        android:textColor="@color/white"
+        android:text=""/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="83dp"
+        android:layout_marginTop="48dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txt_alert_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textColor="@color/black_3e"
+                android:textSize="12sp"
+                android:lineSpacingExtra="2dp"
+                android:text=""
+                android:background="@color/transparent"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/tv_update_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/ic_update_version"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:visibility="gone"
+        android:layout_marginTop="6dp"
+        android:paddingBottom="1dp"
+        android:text="0%" />
+
+    <ProgressBar
+        android:id="@+id/progress_num"
+        android:layout_gravity="center_horizontal"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:indeterminateDrawable="@android:drawable/progress_indeterminate_horizontal"
+        android:indeterminateOnly="false"
+        android:layout_width="200dp"
+        android:layout_height="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="20dp"
+        android:max="100"
+        android:progress="0"
+        android:background="@drawable/update_progressbar_style"
+        android:progressDrawable="@drawable/update_progressbar_style"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="130dp"
+        android:layout_height="38dp"
+        android:background="@drawable/shape_18radius_0fa6ea"
+        android:text="立即更新"
+        android:textSize="17sp"
+        android:visibility="visible"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btn_install"
+        android:layout_width="130dp"
+        android:layout_height="38dp"
+        android:background="@drawable/shape_18radius_0fa6ea"
+        android:layout_marginTop="20dp"
+        android:text="安装"
+        android:textSize="17sp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btn_cl"
+        android:layout_width="130dp"
+        android:layout_height="38dp"
+        android:background="@color/white"
+        android:text="以后再说"
+        android:layout_marginTop="5dp"
+        android:textSize="17sp"
+        android:visibility="visible"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/c_969696" />
+
+
+</LinearLayout>

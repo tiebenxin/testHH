@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/view_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_type"
+            style="@style/app_txt_title_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/app_margin_main"
+            android:paddingTop="1dp"
+            android:paddingRight="@dimen/app_margin_main"
+            android:paddingBottom="1dp"
+            android:text="xxx" />
+
+        <View style="@style/app_line" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/app_layout_list1">
+
+        <LinearLayout style="@style/app_layout_list1_item">
+
+            <ImageView
+                android:id="@+id/img_head"
+                style="@style/app_img_head"
+                android:layout_marginRight="@dimen/app_margin_item" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_name"
+                    style="@style/app_txt_title_2"
+                    android:text="xxxx" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/im_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bg_cheack_green_e"
+                android:padding="10dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/app_line" />
+</LinearLayout>

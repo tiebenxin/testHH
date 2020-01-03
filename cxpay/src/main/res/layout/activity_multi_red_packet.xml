@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <net.cb.cb.library.view.HeadView
+        android:id="@+id/headView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_100"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/app_margin_main"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_notice_bg"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:text="@string/max_amount_notice" />
+
+
+            <LinearLayout
+                style="@style/app_layout_list3_item"
+                android:layout_marginTop="11dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_money_title"
+                    style="@style/app_txt_title_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="单个金额" />
+
+                <net.cb.cb.library.view.CursorEditText
+                    android:id="@+id/ed_money"
+                    style="@style/app_edt1"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:gravity="right|center_vertical"
+                    android:hint="0.00"
+                    android:paddingRight="10dp"
+                    android:inputType="numberDecimal" />
+
+                <TextView
+                    style="@style/app_txt_title_2"
+                    android:text="元" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="19dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="19dp">
+
+                <TextView
+                    android:id="@+id/tv_red_packet_type_title"
+                    style="@style/app_txt_content_1"
+                    android:text="当前为拼手气红包，改为" />
+
+                <TextView
+                    android:id="@+id/tv_red_packet_type"
+                    style="@style/app_txt_content_1"
+                    android:text="普通红包"
+                    android:textColor="@color/blue_600" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/app_layout_list3_item"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/app_txt_title_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="红包个数" />
+
+                <net.cb.cb.library.view.CursorEditText
+                    android:id="@+id/ed_red_packet_num"
+                    style="@style/app_edt1"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:gravity="right|center_vertical"
+                    android:hint="填写个数"
+                    android:paddingRight="10dp"
+                    android:inputType="number" />
+
+                <TextView
+                    style="@style/app_txt_title_2"
+                    android:text="个" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_people_number"
+                style="@style/app_txt_content_1"
+                android:layout_marginLeft="19dp"
+                android:layout_marginTop="7dp"
+                android:text="本群共500人" />
+
+
+            <LinearLayout
+                style="@style/app_layout_list3_item"
+                android:layout_height="64dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/ed_content"
+                    style="@style/app_edt1"
+                    android:layout_width="match_parent"
+                    android:maxLength="12"
+                    android:layout_marginRight="5dp"
+                    android:hint="恭喜发财,大吉大利" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="47dp"
+                android:gravity="center_vertical|center"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/app_txt_title_2"
+                    android:text="¥"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/tv_money"
+                    style="@style/app_txt_title_2"
+                    android:layout_marginLeft="3dp"
+                    android:text="0.00"
+                    android:textSize="40sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_commit"
+                style="@style/app_btn_red"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp"
+                android:text="塞钱进红包" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+
+            <TextView
+                style="@style/app_txt_content_1"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/range_of_receive"
+                android:textSize="10sp" />
+
+
+            <TextView
+                style="@style/app_txt_content_1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="11dp"
+                android:text="@string/auto_back_notice"
+                android:textSize="10sp" />
+
+            <TextView
+                style="@style/app_txt_content_1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16sp"
+                android:text="@string/arrive_to_account_notice"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+    </net.cb.cb.library.view.HeadView>
+</layout>

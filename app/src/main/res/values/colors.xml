@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <drawable name="blank_code">@color/transparent</drawable>
+    <color name="hint_grey">#868686</color>
+    <color name="gray_99">#999999</color>
+    <color name="msg_tag_color">#8290af</color>
+
+
+</resources>

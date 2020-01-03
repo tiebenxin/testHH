@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:headview_title="聊天详情">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/app_layout_list1_item">
+
+            <android.support.v7.widget.RecyclerView
+
+                android:id="@+id/topListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+        </LinearLayout>
+
+        <View style="@style/app_line" />
+
+
+        <LinearLayout style="@style/app_layout_list2">
+
+            <LinearLayout
+                android:id="@+id/view_log"
+                style="@style/app_layout_list2_item">
+
+                <TextView
+                    style="@style/app_txt_title_2"
+                    android:layout_marginRight="@dimen/app_margin_item"
+                    android:layout_weight="1"
+                    android:text="查找聊天记录" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_btn_goto" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/app_layout_list2">
+
+            <LinearLayout
+                android:id="@+id/view_encode"
+                style="@style/app_layout_list2_item">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/app_txt_title_2"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:layout_weight="1"
+                        android:text="加密" />
+
+                    <TextView
+                        style="@style/app_txt_title_3"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:layout_weight="1"
+                        android:text="此对话中所发送的信息都已经进行端到端加密"
+                        android:textColor="@color/gray_300" />
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_lock" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout style="@style/app_layout_list2">
+
+            <LinearLayout
+                android:id="@+id/view_top"
+                style="@style/app_layout_list2_item">
+
+                <TextView
+                    style="@style/app_txt_title_2"
+                    android:layout_marginRight="@dimen/app_margin_item"
+                    android:layout_weight="1"
+                    android:text="置顶聊天" />
+
+                <CheckBox
+                    android:id="@+id/ck_top"
+                    style="@style/app_check" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_disturb"
+                style="@style/app_layout_list2_item">
+
+                <TextView
+                    style="@style/app_txt_title_2"
+                    android:layout_marginRight="@dimen/app_margin_item"
+                    android:layout_weight="1"
+                    android:text="消息免打扰" />
+
+                <CheckBox
+                    android:id="@+id/ck_disturb"
+                    style="@style/app_check" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/read_destroy_ll"
+            style="@style/app_layout_list2"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/view_destroy_time"
+                style="@style/app_layout_list2_item">
+
+                <TextView
+                    style="@style/app_txt_title_2"
+                    android:layout_marginRight="@dimen/app_margin_item"
+                    android:layout_weight="1"
+                    android:text="阅后即焚" />
+
+                <TextView
+                    android:id="@+id/tv_destroy_time"
+                    style="@style/app_txt_title_2"
+                    android:layout_marginRight="@dimen/app_margin_item"
+                    android:textColor="@color/gray_300"
+                    android:text="关闭"/>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_btn_goto" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="@dimen/app_margin_main"
+                android:paddingRight="@dimen/app_margin_main"
+                android:text="如果设置该选项,该聊天里面发送和接受消息将在阅读后指定时间内消失" />
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/view_set_read"
+            style="@style/app_layout_list2_item"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:layout_weight="1"
+                android:text="开启消息已读" />
+
+            <CheckBox
+                android:id="@+id/ck_set_read"
+                style="@style/app_check" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:paddingLeft="@dimen/app_margin_main"
+            android:paddingRight="@dimen/app_margin_main"
+            android:text="查看当前会话消息已读状态,如果关闭已读回执,您也将无法查看他人的消息已读回执" />
+
+
+        <LinearLayout style="@style/app_layout_list2">
+
+            <LinearLayout
+                android:id="@+id/view_log_clean"
+                style="@style/app_layout_list2_item">
+
+                <TextView
+                    style="@style/app_txt_title_2"
+                    android:layout_marginRight="@dimen/app_margin_item"
+                    android:layout_weight="1"
+                    android:text="清空聊天记录" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</net.cb.cb.library.view.HeadView>

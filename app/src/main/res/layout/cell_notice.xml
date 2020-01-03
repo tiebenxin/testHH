@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/app_margin_main"
+    android:paddingTop="3dp"
+    android:paddingRight="@dimen/app_margin_main"
+    android:paddingBottom="3dp">
+
+
+    <TextView
+        android:id="@+id/tv_time"
+        style="@style/app_txt_content_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:text="shijian" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_broadcast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/ic_rd_note" />
+
+        <TextView
+            android:id="@+id/tv_broadcast"
+            style="@style/app_txt_title_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape_notice"
+            android:gravity="center"
+            android:padding="2dp"
+            android:singleLine="false"
+            android:text="公告"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

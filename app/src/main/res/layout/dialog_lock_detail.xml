@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:background="@drawable/shape_dialog_lock"
+    android:orientation="vertical">
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_title"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="20dp"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:layout_marginBottom="10dp"-->
+    <!--android:text="温馨提示"-->
+    <!--android:textColor="@color/black"-->
+    <!--android:textSize="16sp"-->
+    <!--android:textStyle="bold" />-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:background="@color/gray_100" />-->
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp"
+        android:text="端对端加密通讯方式是让发送的信息只能被z特定的收信人解密，并获得信息内容。不允许第三方介入。换言之，
+只有消息接收者持有密钥，而负责传递信息的服务器仅作为媒介，它本身不能解密信息。服务器只是一个中转站，没有密钥，不能解密。而密钥则
+是在另一终端用户的手中。只有消息接收者才知道你发的消息内容。任何第三方，甚至开发人员都无法知道用户之间的信息内容"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+</LinearLayout>

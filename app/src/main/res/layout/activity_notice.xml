@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:headview_title="用户服务协议及隐私政策">
+
+   <RelativeLayout
+       android:background="#ffffff"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <TextView
+           android:id="@+id/activity_notice_tv"
+           android:layout_margin="10dp"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:textStyle="bold"
+           android:textColor="#000000"
+           android:lineSpacingExtra="5dp"
+           android:lineSpacingMultiplier="1.1"
+           android:text="尊敬的常信用户，为了更好地保障您的合法权益，正常使用云红包服务，广州之讯网络科技有限公司依照国家法律法规，对支付账户进行实名管理、履行反洗钱职责并采取风险防控措施。您需要提交身份信息、联系方式、交易信息。
+广州之讯网络科技有限公司将严格按照国家法律法规收集、存储、使用您的个人信息，确保信息安全。
+请您务必阅读并充分理解《用户服务协议》和《隐私政策》，若你同意接受前述协议，请点击“同意”并继续注册操作。点击“不同意”终止注册操作。"
+           />
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="40dp"
+           android:layout_alignParentBottom="true"
+           android:background="@color/gray_100"
+           >
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="不同意"
+               android:textSize="16dp"
+               android:layout_centerVertical="true"
+               android:layout_marginLeft="10dp"
+               />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="同意"
+               android:layout_alignParentRight="true"
+               android:textSize="16dp"
+               android:layout_centerVertical="true"
+               android:layout_marginRight="10dp"
+               android:layout_marginLeft="10dp"
+               />
+
+       </RelativeLayout>
+       
+   </RelativeLayout>
+    
+</net.cb.cb.library.view.HeadView>

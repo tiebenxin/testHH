@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <net.cb.cb.library.view.HeadView
+        android:id="@+id/headView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:headview_title="选择一个聊天">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <net.cb.cb.library.view.CustomTabView
+                android:id="@+id/tab_view"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:id="@+id/view_search"
+                    style="@style/app_layout_list2_item_search"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/shape_search_bg">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="6dp"
+                        android:src="@mipmap/ic_msg_search" />
+
+                    <net.cb.cb.library.view.ClearEditText
+                        android:id="@+id/edt_search"
+                        style="@style/app_edt1"
+                        android:background="@color/transparent"
+                        android:hint="搜索"
+                        android:imeOptions="actionSearch" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View style="@style/app_line"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <FrameLayout
+                    android:id="@+id/fl_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tv_success"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/black_33"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="转发成功"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+
+            <!--<include layout="@layout/layout_tab_custom" />-->
+
+        </LinearLayout>
+
+
+    </net.cb.cb.library.view.HeadView>
+</layout>

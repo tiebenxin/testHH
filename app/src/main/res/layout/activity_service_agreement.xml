@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <net.cb.cb.library.view.HeadView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/headView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:headview_title="服务协议及隐私">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layout_content"
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_height="45dp">
+                    <TextView
+                        android:id="@+id/txt_no_agree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:paddingRight="15dp"
+                        android:paddingLeft="15dp"
+                        android:text="不同意"
+                        android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/txt_agree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:layout_alignParentRight="true"
+                    android:text="同意"
+                    android:textColor="@color/blue_600"/>
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/txt_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="5dp"
+                android:padding="15dp"
+                android:layout_above="@id/layout_content"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+
+    </net.cb.cb.library.view.HeadView>
+</layout>

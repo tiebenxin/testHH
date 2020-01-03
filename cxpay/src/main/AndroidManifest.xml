@@ -1,0 +1,103 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hm.cxpay">
+
+    <application>
+        <activity
+            android:name=".ui.LooseChangeActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".ui.identification.IdentificationUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.identification.IdentificationInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.recharege.RechargeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.recharege.RechargeSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.payword.CheckPaywordActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".ui.bank.InputPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.bank.BindBankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.bank.BankSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.bank.BankDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.bank.BindBankFinishActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.bank.SelectBankCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.withdraw.WithdrawActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.withdraw.WithdrawSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.BindPhoneNumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.change.ChangeDetailListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.change.ChangeDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.bill.BillDetailListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.bill.BillDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.payword.SetPaywordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.payword.ManagePaywordActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".ui.payword.ModifyPaywordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.payword.ForgetPswStepOneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.payword.ForgetPswStepTwoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.payword.ForgetPswStepThreeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.payword.ForgetPswStepFourActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 发送单个红包-->
+        <activity
+            android:name=".ui.redenvelope.SingleRedPacketActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!-- 发送群红包-->
+        <activity
+            android:name=".ui.redenvelope.MultiRedPacketActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.transfer.TransferActivity" />
+        <activity android:name=".ui.transfer.TransferDetailActivity" />
+        <activity android:name=".ui.transfer.TransferResultActivity" />
+
+    </application>
+</manifest>

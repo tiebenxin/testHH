@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_13radius_solid_ffffff">
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="18dp"
+        android:paddingLeft="18dp"
+        android:paddingBottom="18dp"
+        android:paddingRight="15dp"
+        android:src="@mipmap/ic_close_one"/>
+
+    <TextView
+        android:id="@+id/temp_text_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/c_000000"
+        android:textSize="14sp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/iv_close"
+        android:text="选择支付银行卡"/>
+    <TextView
+        android:id="@+id/temp_text_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/c_000000"
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/temp_text_one"
+        android:text="充值"/>
+
+    <TextView
+        android:id="@+id/tv_recharge_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/c_000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/temp_text_two"
+        android:text="¥0.00"/>
+
+    <View style="@style/money_change_line"
+        android:id="@+id/line_one"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_below="@+id/tv_recharge_value"/>
+    <LinearLayout
+        android:id="@+id/layout_add_bankcard"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_below="@+id/line_one">
+        <ImageView
+            android:id="@+id/temp_icon_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="12dp"
+            android:src="@mipmap/ic_add_bankcard"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/c_000000"
+            android:textSize="14sp"
+            android:layout_marginTop="11dp"
+            android:layout_marginLeft="10dp"
+            android:text="添加银行卡支付"/>
+        <ImageView
+            android:id="@+id/temp_icon_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="18dp"
+            android:src="@mipmap/ic_right_arrow_one"/>
+    </LinearLayout>
+    <View style="@style/money_change_line"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginBottom="35dp"
+        android:layout_below="@+id/layout_add_bankcard"/>
+
+
+
+
+</RelativeLayout>

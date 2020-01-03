@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+       style="@style/app_txt_title_1"
+        android:text="分割线"/>
+    <View
+        style="@style/app_line"/>
+    <TextView
+        style="@style/app_txt_title_1"
+        android:text="qita"/>
+<com.yanlong.im.chat.ui.view.VoiceView
+    android:id="@+id/voice"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+</LinearLayout>

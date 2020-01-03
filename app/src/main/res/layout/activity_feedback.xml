@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:headview_title="问题反馈">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/app_txt_title_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="问题描述:" />
+
+        <EditText
+            android:id="@+id/ed_content"
+            android:layout_width="match_parent"
+            android:minHeight="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_edt1"
+            android:gravity="top"
+            android:hint="请描述您需要反馈的问题或者意见"
+            android:maxLength="300"
+            android:padding="5dp"
+            android:textSize="16sp" />
+
+
+        <TextView
+            style="@style/app_txt_title_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="截图:" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <Button
+            android:id="@+id/btn_commit"
+            style="@style/app_btn_green"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="50dp"
+            android:text="提交" />
+
+        <TextView
+            style="@style/app_txt_title_4"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="如需联系在线客服，请添加客服常信号。" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <TextView
+                style="@style/app_txt_title_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="常信客服1：CX888" />
+            <TextView
+                style="@style/app_txt_title_4"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:layout_height="wrap_content"
+                android:text="常信客服2：CX999" />
+        </LinearLayout>
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</net.cb.cb.library.view.HeadView>

@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:headview_title="详细资料">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            style="@style/app_layout_list1"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/view_head"
+                style="@style/app_layout_list1_item"
+                android:layout_height="89dp">
+
+                <ImageView
+                    android:id="@+id/img_head"
+                    style="@style/app_img_head"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="@dimen/app_margin_item" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_mkname"
+                        style="@style/app_txt_title_2"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/txt_nkname"
+                        style="@style/app_txt_content_1"
+                        android:layout_marginTop="5dp"
+                        android:text="昵称："
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/txt_pr_no"
+                        style="@style/app_txt_content_1"
+                        android:layout_marginTop="5dp"
+                        android:text="常信号："
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_remark"
+                style="@style/app_txt_title_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_user_info"
+                android:padding="10dp"
+                android:singleLine="false"
+                android:visibility="gone" />
+
+        </LinearLayout>
+        <!-- 设置备注-->
+        <LinearLayout
+            android:id="@+id/view_setting_name"
+            style="@style/app_layout_list2"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/view_mkname"
+                style="@style/app_layout_list2_item">
+
+                <TextView
+                    style="@style/app_txt_title_2"
+                    android:layout_marginRight="@dimen/app_margin_item"
+                    android:layout_weight="1"
+                    android:text="设置备注和描述" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_btn_goto" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <!-- 进群方式-->
+        <LinearLayout
+            android:id="@+id/view_join_group_type"
+            style="@style/app_layout_list2"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+
+                style="@style/app_layout_list2_item">
+
+                <TextView
+                    style="@style/app_txt_title_2"
+                    android:layout_marginRight="@dimen/app_margin_item"
+                    android:layout_weight="1"
+                    android:text="进群方式" />
+
+                <TextView
+                    android:id="@+id/tv_join_group_name"
+                    style="@style/app_txt_title_2"
+                    android:layout_marginRight="5dp"
+                    android:text="扫码进群"
+                    android:textColor="#276baa" />
+
+                <TextView
+                    android:id="@+id/tv_join_group_type"
+                    style="@style/app_txt_title_2"
+                    android:layout_marginRight="@dimen/app_margin_item"
+                    android:text="扫码进群"
+                    android:textColor="@color/gray_300" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_btn_goto"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 设置标签-->
+        <LinearLayout
+            android:id="@+id/view_setting_label"
+            style="@style/app_layout_list2"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/view_label"
+                style="@style/app_layout_list2_item">
+
+                <TextView
+                    style="@style/app_txt_title_2"
+                    android:layout_marginRight="@dimen/app_margin_item"
+                    android:layout_weight="1"
+                    android:text="设置标签" />
+
+                <TextView
+                    android:id="@+id/txt_label"
+                    style="@style/app_txt_title_2"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="@dimen/app_margin_item"
+                    android:textColor="@color/gray_300"
+                    android:text="" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_btn_goto" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                style="@style/app_layout_list2">
+
+                <!-- 加入黑名单-->
+                <LinearLayout
+                    android:id="@+id/view_black"
+                    style="@style/app_layout_list2_item">
+
+                    <TextView
+                        android:id="@+id/tv_black"
+                        style="@style/app_txt_title_2"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:layout_weight="1"
+                        android:text="加入黑名单" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_btn_goto" />
+                </LinearLayout>
+                <!-- 删除联系人-->
+                <LinearLayout
+                    android:id="@+id/view_del"
+                    style="@style/app_layout_list2_item">
+
+                    <TextView
+                        style="@style/app_txt_title_2"
+                        android:layout_marginRight="@dimen/app_margin_item"
+                        android:layout_weight="1"
+                        android:text="删除联系人" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_btn_goto" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 权限设置-->
+        <LinearLayout
+            android:id="@+id/view_setting_power"
+            style="@style/app_layout_list2"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/view_power"
+                style="@style/app_layout_list2_item">
+
+                <TextView
+                    style="@style/app_txt_title_2"
+                    android:layout_marginRight="@dimen/app_margin_item"
+                    android:layout_weight="1"
+                    android:text="权限设置" />
+
+                <TextView
+                    android:id="@+id/txt_power"
+                    style="@style/app_txt_title_2"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:textColor="@color/gray_300"
+                    android:text="" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_btn_goto" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/app_margin_item_top"
+                android:paddingLeft="@dimen/app_margin_main"
+                android:textColor="@color/gray_300"
+                android:textSize="@dimen/dimen_12"
+                android:text="禁言、领取零钱红包等权限设置"/>
+        </LinearLayout>
+
+        <!-- 投诉-->
+        <LinearLayout style="@style/app_layout_list2">
+
+            <LinearLayout
+                android:id="@+id/view_complaint"
+                style="@style/app_layout_list2_item"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/app_txt_title_2"
+                    android:layout_marginRight="@dimen/app_margin_item"
+                    android:layout_weight="1"
+                    android:text="投诉" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_btn_goto" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_msg"
+            style="@style/app_btn_green"
+            android:layout_marginLeft="@dimen/app_margin_main"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="@dimen/app_margin_main"
+            android:visibility="gone"
+            android:text="发送消息" />
+        <!-- 功能介绍-->
+        <LinearLayout
+            android:id="@+id/view_introduce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/app_margin_item_top"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:minHeight="48dp"
+            android:paddingLeft="@dimen/app_margin_main"
+            android:paddingRight="@dimen/app_margin_main"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:text="功能介绍"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_introduce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/app_margin_item"
+                android:text=""
+                android:textColor="@color/gray_300"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_add"
+            style="@style/app_btn_green"
+            android:layout_marginLeft="@dimen/app_margin_main"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="@dimen/app_margin_main"
+            android:text="添加好友"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</net.cb.cb.library.view.HeadView>

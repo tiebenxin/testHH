@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="277dp"
+    android:layout_height="139dp"
+    android:background="@drawable/shape_13radius_solid_ffffff">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/c_000000"
+        android:textSize="15sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="您当前的网络环境是“移动数据”\n是否允许使用流量更新?"/>
+
+    <View style="@style/payword_line"
+        android:id="@+id/line_one"
+        android:layout_below="@+id/tv_title"/>
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="138dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/line_one"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textColor="@color/c_828282"
+        android:text="取消更新 "/>
+    <View
+        android:id="@+id/line_two"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/c_f0f0f0"
+        android:layout_toRightOf="@+id/tv_cancel"
+        android:layout_below="@+id/line_one"/>
+    <TextView
+        android:id="@+id/tv_sure"
+        android:layout_width="138dp"
+        android:layout_height="48dp"
+        android:layout_toRightOf="@+id/line_two"
+        android:layout_below="@+id/line_one"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textColor="@color/c_32b053"
+        android:text="允许"/>
+
+
+
+
+</RelativeLayout>

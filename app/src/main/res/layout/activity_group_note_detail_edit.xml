@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <net.cb.cb.library.view.HeadView
+        android:id="@+id/headView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:headview_title="修改群公告">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/tv_content"
+                style="@style/app_txt_content_3"
+                android:layout_marginLeft="@dimen/app_margin_main"
+                android:layout_marginRight="@dimen/app_margin_main"
+                android:paddingTop="13dp"
+                android:paddingBottom="13dp" />
+
+        </ScrollView>
+
+
+        <EditText
+            android:id="@+id/et_txt"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:paddingLeft="21dp"
+            android:paddingTop="14dp"
+            android:maxHeight="280dp"
+            android:paddingRight="21dp"
+            android:paddingBottom="13dp"
+            android:scrollbars="vertical"
+            android:gravity="top"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+<!--        <EditText-->
+<!--            android:id="@+id/et_txt"-->
+<!--            style="@style/app_edt2"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:paddingLeft="21dp"-->
+<!--            android:paddingTop="14dp"-->
+<!--            android:maxHeight="280dp"-->
+<!--            android:paddingRight="21dp"-->
+<!--            android:paddingBottom="13dp"-->
+<!--            android:scrollbars="vertical"-->
+<!--            android:gravity="top"-->
+<!--            android:textColor="#000000"-->
+<!--            android:textSize="14sp" />-->
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <com.yanlong.im.pay.ui.view.TextLineView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_marginBottom="85dp" />-->
+<!--        </RelativeLayout>-->
+    </net.cb.cb.library.view.HeadView>
+</layout>

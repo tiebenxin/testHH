@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <net.cb.cb.library.view.HeadView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/headView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F7F"
+        app:headview_title="不活跃群成员">
+            <LinearLayout
+                android:orientation="vertical"
+                 android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/layout_three_day"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    style="@style/app_layout_list2_item">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                            <TextView
+                                style="@style/app_txt_title_2"
+                                android:layout_marginRight="@dimen/app_margin_item"
+                                android:textSize="16sp"
+                                android:textColor="@color/color_353"
+                                android:text="三天不活跃" />
+
+                            <TextView
+                                style="@style/app_txt_title_2"
+                                android:textSize="12sp"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@color/gray_300"
+                                android:layout_marginRight="@dimen/app_margin_item"
+                                android:text="超过三天未在本群发消息的群成员" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_three_day"
+                        style="@style/app_txt_title_2"
+                        android:layout_marginRight="9dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray_300"
+                        android:text="10人" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_btn_goto" />
+                </LinearLayout>
+
+                <View style="@style/app_line"/>
+
+                <LinearLayout
+                    android:id="@+id/layout_seven_day"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    style="@style/app_layout_list2_item">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            style="@style/app_txt_title_2"
+                            android:layout_marginRight="@dimen/app_margin_item"
+                            android:textSize="16sp"
+                            android:textColor="@color/color_353"
+                            android:text="一周不活跃" />
+
+                        <TextView
+                            style="@style/app_txt_title_2"
+                            android:textSize="12sp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/gray_300"
+                            android:layout_marginRight="@dimen/app_margin_item"
+                            android:text="超过一周未在本群发消息的群成员" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_seven_day"
+                        style="@style/app_txt_title_2"
+                        android:layout_marginRight="9dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray_300"
+                        android:text="15人" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_btn_goto" />
+                </LinearLayout>
+
+                <View style="@style/app_line"/>
+
+                <LinearLayout
+                    android:id="@+id/layout_one_month"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    style="@style/app_layout_list2_item">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            style="@style/app_txt_title_2"
+                            android:layout_marginRight="@dimen/app_margin_item"
+                            android:textSize="16sp"
+                            android:textColor="@color/color_353"
+                            android:text="一个月不活跃" />
+
+                        <TextView
+                            style="@style/app_txt_title_2"
+                            android:textSize="12sp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/gray_300"
+                            android:layout_marginRight="@dimen/app_margin_item"
+                            android:text="超过一个月未在本群发消息的群成员" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_one_month"
+                        style="@style/app_txt_title_2"
+                        android:layout_marginRight="9dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray_300"
+                        android:text="20人" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_btn_goto" />
+                </LinearLayout>
+            </LinearLayout>
+    </net.cb.cb.library.view.HeadView>
+</layout>

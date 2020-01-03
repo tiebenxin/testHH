@@ -1,0 +1,82 @@
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:headview_title="充值详情">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="55dp"
+            android:layout_marginBottom="29dp"
+            android:src="@mipmap/ic_recharge_success" />
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_one"
+            android:layout_centerHorizontal="true"
+            android:text="充值已提交"
+            android:textColor="@color/c_000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_one"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="充值金额: ￥0.00"
+            android:textColor="@color/c_000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_money"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="50dp"
+            android:lineSpacingExtra="3dp"
+            android:text="完成支付后，资金将在1小时内到账。充值结果会通过“零钱小助手”通知你，如未到账，请及时联系客
+服或者点击我—帮助—问题反馈填写留言给我们。"
+            android:textColor="@color/c_000000"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="144dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tv_two"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/shape_5radius_solid_32b053"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="55dp"
+            android:text="充值失败后，资金将原路返回您的账户"
+            android:textColor="@color/c_868686"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+</net.cb.cb.library.view.HeadView>

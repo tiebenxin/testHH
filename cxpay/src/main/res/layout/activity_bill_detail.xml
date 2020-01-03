@@ -1,0 +1,857 @@
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:headview_title="账单详情">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/no_data_layout"
+            layout="@layout/layout_no_data"
+            android:visibility="gone"/>
+
+        <ScrollView
+            android:id="@+id/sv_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:background="@color/c_f6f6f6">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_title_image"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginBottom="15dp"
+                    android:src="@mipmap/ic_img_def" />
+
+                <ImageView
+                    android:id="@+id/iv_redpacket_image"
+                    android:layout_width="31dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginBottom="15dp"
+                    android:visibility="gone"
+                    android:src="@mipmap/ic_img_def" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text=""
+                    android:textColor="@color/c_0f0f0f"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:text="¥0.00"
+                    android:textColor="@color/c_0f0f0f"
+                    android:textSize="16sp" />
+
+
+                <View
+                    style="@style/money_change_line"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="30dp" />
+
+                <!--布局全部单独分开-->
+                <!--充值-->
+                <RelativeLayout
+                    android:id="@+id/layout_recharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginLeft="48dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:id="@+id/title_tv_recharge_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="交易状态："
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/title_tv_recharge_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_tv_recharge_status"
+                        android:layout_marginTop="15dp"
+                        android:text="充值时间："
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/title_tv_recharge_bank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_tv_recharge_time"
+                        android:layout_marginTop="15dp"
+                        android:text="支付银行："
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/title_tv_recharge_order_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_tv_recharge_bank"
+                        android:layout_marginTop="15dp"
+                        android:text="交易单号："
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_recharge_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/title_tv_recharge_status"
+                        android:text=""
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_recharge_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_tv_recharge_status"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/title_tv_recharge_time"
+                        android:text=""
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_recharge_bank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_tv_recharge_time"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/title_tv_recharge_bank"
+                        android:text=""
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_recharge_order_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_tv_recharge_bank"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/title_tv_recharge_order_id"
+                        android:text=""
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+
+                </RelativeLayout>
+                <!--提现A-->
+                <RelativeLayout
+                    android:id="@+id/layout_withdraw_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginLeft="48dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:id="@+id/title_tv_withdraw_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="提现金额："
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_withdraw_status_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/title_tv_withdraw_status"
+                        android:text="发起提现\n1990-01-01  00:00:00"
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_withdraw_status_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_below="@+id/tv_withdraw_status_one"
+                        android:layout_alignLeft="@+id/tv_withdraw_status_one"
+                        android:src="@mipmap/ic_down_arrow_one"/>
+
+                    <TextView
+                        android:id="@+id/tv_withdraw_status_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_below="@+id/iv_withdraw_status_one"
+                        android:layout_toRightOf="@+id/title_tv_withdraw_status"
+                        android:text="银行处理中"
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_withdraw_status_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_below="@+id/tv_withdraw_status_two"
+                        android:visibility="gone"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_alignLeft="@+id/tv_withdraw_status_one"
+                        android:src="@mipmap/ic_down_arrow_one"/>
+
+                    <TextView
+                        android:id="@+id/tv_withdraw_status_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_withdraw_status_two"
+                        android:layout_alignLeft="@+id/tv_withdraw_status_two"
+                        android:layout_toRightOf="@+id/title_tv_withdraw_status"
+                        android:text="到账\n1990-01-01  00:00:00"
+                        android:textColor="@color/c_000000"
+                        android:visibility="gone"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_withdraw_finished"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="10dp"
+                        android:visibility="gone"
+                        android:layout_alignBottom="@+id/tv_withdraw_status_three"
+                        android:layout_toLeftOf="@+id/tv_withdraw_status_three"
+                        android:src="@mipmap/ic_finish_one"/>
+
+
+                </RelativeLayout>
+                <View
+                    style="@style/money_change_line"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp" />
+                <!--提现B-->
+                <RelativeLayout
+                    android:id="@+id/layout_withdraw_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginLeft="48dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:id="@+id/title_tv_withdraw_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="提现金额："
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/title_tv_withdraw_create_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_tv_withdraw_money"
+                        android:layout_marginTop="15dp"
+                        android:text="申请时间："
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/title_tv_withdraw_get_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_tv_withdraw_create_time"
+                        android:layout_marginTop="15dp"
+                        android:text="到账时间："
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/title_tv_withdraw_real_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_tv_withdraw_get_time"
+                        android:layout_marginTop="15dp"
+                        android:text="到账金额："
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/title_tv_withdraw_charge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_tv_withdraw_real_money"
+                        android:layout_marginTop="15dp"
+                        android:text="手续费：　"
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/title_tv_withdraw_bank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_tv_withdraw_charge"
+                        android:layout_marginTop="15dp"
+                        android:text="提现银行："
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+
+                    <TextView
+                        android:id="@+id/title_tv_withdraw_order_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_tv_withdraw_bank"
+                        android:layout_marginTop="15dp"
+                        android:text="交易单号："
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_withdraw_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/title_tv_withdraw_money"
+                        android:text=""
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_withdraw_create_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_withdraw_money"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/title_tv_withdraw_create_time"
+                        android:text=""
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_withdraw_get_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_withdraw_create_time"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/title_tv_withdraw_get_time"
+                        android:text=""
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_withdraw_real_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_withdraw_get_time"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/title_tv_withdraw_real_money"
+                        android:text=""
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_withdraw_charge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_withdraw_real_money"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/title_tv_withdraw_charge"
+                        android:text=""
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_withdraw_bank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_withdraw_charge"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/title_tv_withdraw_bank"
+                        android:text=""
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_withdraw_order_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_withdraw_bank"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/title_tv_withdraw_order_id"
+                        android:text=""
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+
+
+
+                </RelativeLayout>
+                <!--转账 收-->
+                <RelativeLayout
+                    android:id="@+id/layout_transfer_get"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="48dp"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:id="@+id/title_tv_transfer_get_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="交易状态："
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/title_tv_transfer_get_explain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_tv_transfer_get_status"
+                        android:layout_marginTop="15dp"
+                        android:text="转账说明："
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/title_tv_transfer_get_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_tv_transfer_get_explain"
+                        android:layout_marginTop="15dp"
+                        android:text="收款时间："
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/title_tv_transfer_get_order_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_tv_transfer_get_time"
+                        android:layout_marginTop="15dp"
+                        android:text="交易单号："
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_transfer_get_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/title_tv_transfer_get_status"
+                        android:text=""
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_transfer_get_explain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_transfer_get_status"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/title_tv_transfer_get_explain"
+                        android:text=""
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_transfer_get_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_transfer_get_explain"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/title_tv_transfer_get_time"
+                        android:text=""
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_transfer_get_order_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_transfer_get_time"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/title_tv_transfer_get_order_id"
+                        android:text=""
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+
+                </RelativeLayout>
+                <!--转账 发-->
+                <RelativeLayout
+                    android:id="@+id/layout_transfer_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="48dp"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:id="@+id/title_tv_transfer_send_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="交易状态："
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/title_tv_transfer_send_explain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_tv_transfer_send_status"
+                        android:layout_marginTop="15dp"
+                        android:text="转账说明："
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/title_tv_transfer_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_tv_transfer_send_explain"
+                        android:layout_marginTop="15dp"
+                        android:text="转账时间："
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/title_tv_transfer_send_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_tv_transfer_time"
+                        android:layout_marginTop="15dp"
+                        android:text="收款时间："
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/title_tv_transfer_send_pay_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_tv_transfer_send_time"
+                        android:layout_marginTop="15dp"
+                        android:text="支付方式："
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/title_tv_transfer_send_order_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_tv_transfer_send_pay_style"
+                        android:layout_marginTop="15dp"
+                        android:text="交易单号："
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_transfer_send_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/title_tv_transfer_send_status"
+                        android:text=""
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_transfer_send_explain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_transfer_send_status"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/title_tv_transfer_send_explain"
+                        android:text=""
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_transfer_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_transfer_send_explain"
+                        android:layout_toRightOf="@+id/title_tv_transfer_time"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:text=""
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_transfer_send_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_transfer_time"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/title_tv_transfer_send_time"
+                        android:text=""
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_transfer_send_pay_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_transfer_send_time"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/title_tv_transfer_send_pay_style"
+                        android:text=""
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_transfer_send_order_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_transfer_send_pay_style"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/title_tv_transfer_send_order_id"
+                        android:text=""
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+
+                </RelativeLayout>
+                <!--红包 收 发 退-->
+                <RelativeLayout
+                    android:id="@+id/layout_red_packet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="48dp"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:id="@+id/title_tv_red_packet_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="交易状态："
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/title_tv_red_packet_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_tv_red_packet_status"
+                        android:layout_marginTop="15dp"
+                        android:text="红包详情："
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/title_tv_red_packet_pay_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_tv_red_packet_detail"
+                        android:layout_marginTop="15dp"
+                        android:text="支付时间："
+                        android:visibility="visible"
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/title_tv_red_packet_pay_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_tv_red_packet_pay_time"
+                        android:layout_marginTop="15dp"
+                        android:text="支付方式："
+                        android:visibility="visible"
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/title_tv_red_packet_get_money_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_tv_red_packet_pay_style"
+                        android:layout_marginTop="15dp"
+                        android:text="收款时间："
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+
+                    <TextView
+                        android:id="@+id/title_tv_red_packet_order_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_tv_red_packet_get_money_time"
+                        android:layout_marginTop="15dp"
+                        android:text="交易单号："
+                        android:textColor="@color/c_868686"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_red_packet_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/title_tv_red_packet_status"
+                        android:text=""
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_red_packet_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_red_packet_status"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="25dp"
+                        android:layout_toRightOf="@+id/title_tv_red_packet_detail"
+                        android:text="查看"
+                        android:textColor="@color/c_32b053"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_red_packet_pay_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_red_packet_detail"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/title_tv_red_packet_pay_time"
+                        android:text=""
+                        android:visibility="visible"
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_red_packet_pay_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_red_packet_pay_time"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/title_tv_red_packet_pay_style"
+                        android:text=""
+                        android:visibility="visible"
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_red_packet_get_money_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_red_packet_pay_style"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/title_tv_red_packet_get_money_time"
+                        android:text=""
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_red_packet_order_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_red_packet_get_money_time"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/title_tv_red_packet_order_id"
+                        android:text=""
+                        android:textColor="@color/c_000000"
+                        android:textSize="13sp" />
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/c_f6f6f6" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:text="常见问题"
+                        android:textColor="@color/c_0f0f0f"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:src="@mipmap/ic_right_arrow_one" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+
+
+    </LinearLayout>
+
+
+</net.cb.cb.library.view.HeadView>

@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="MainAppThrme" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="colorAccent">@color/green_600</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+
+        <item name="android:statusBarColor" >@android:color/transparent</item>
+      <!--  <item name="android:statusBarColor">@color/white</item>-->
+        <item name="android:windowLightStatusBar" >true</item>
+
+    </style>
+
+
+</resources>

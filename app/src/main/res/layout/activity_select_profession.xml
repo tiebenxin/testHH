@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_100"
+    app:headview_title="实名认证中心">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/app_txt_content_1"
+            android:layout_marginLeft="@dimen/app_margin_main"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:text="请选择你的职业" />
+
+
+        <net.cb.cb.library.view.MultiListView
+            android:id="@+id/mtListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</net.cb.cb.library.view.HeadView>

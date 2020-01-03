@@ -1,0 +1,285 @@
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:headview_title="充值">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="6dp"
+                android:text="充值金额不能低于10.00元"
+                android:textColor="@color/c_A7051A"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="充值金额"
+                    android:textColor="@color/c_0f0f0f"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/et_recharge"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="right|center_vertical"
+                    android:hint="单笔最低充值10元，最高500元"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:paddingRight="18dp"
+                    android:textColor="@color/c_0f0f0f"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="13dp"
+                    android:text="元"
+                    android:textColor="@color/c_0f0f0f"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View style="@style/money_change_line" />
+
+            <TextView
+                android:id="@+id/tv_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="4dp"
+                android:text="当前零钱余额  ¥0.00"
+                android:textColor="@color/c_868686"
+                android:textSize="12sp" />
+
+            <View style="@style/money_change_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_select_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="14dp"
+                        android:background="@drawable/shape_5radius_stroke_517da2"
+                        android:gravity="center"
+                        android:paddingLeft="28dp"
+                        android:paddingTop="17dp"
+                        android:paddingRight="28dp"
+                        android:paddingBottom="17dp"
+                        android:text="10元"
+                        android:textColor="@color/c_517da2"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_select_four"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="14dp"
+                        android:background="@drawable/shape_5radius_stroke_517da2"
+                        android:gravity="center"
+                        android:paddingLeft="28dp"
+                        android:paddingTop="17dp"
+                        android:paddingRight="28dp"
+                        android:paddingBottom="17dp"
+                        android:text="100元"
+                        android:textColor="@color/c_517da2"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_select_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="14dp"
+                        android:background="@drawable/shape_5radius_stroke_517da2"
+                        android:gravity="center"
+                        android:paddingLeft="28dp"
+                        android:paddingTop="17dp"
+                        android:paddingRight="28dp"
+                        android:paddingBottom="17dp"
+                        android:text="20元"
+                        android:textColor="@color/c_517da2"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_select_five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="14dp"
+                        android:background="@drawable/shape_5radius_stroke_517da2"
+                        android:gravity="center"
+                        android:paddingLeft="28dp"
+                        android:paddingTop="17dp"
+                        android:paddingRight="28dp"
+                        android:paddingBottom="17dp"
+                        android:text="200元"
+                        android:textColor="@color/c_517da2"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_select_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="14dp"
+                        android:background="@drawable/shape_5radius_stroke_517da2"
+                        android:gravity="center"
+                        android:paddingLeft="28dp"
+                        android:paddingTop="17dp"
+                        android:paddingRight="28dp"
+                        android:paddingBottom="17dp"
+                        android:text="30元"
+                        android:textColor="@color/c_517da2"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_select_six"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="14dp"
+                        android:background="@drawable/shape_5radius_stroke_517da2"
+                        android:gravity="center"
+                        android:paddingLeft="28dp"
+                        android:paddingTop="17dp"
+                        android:paddingRight="28dp"
+                        android:paddingBottom="17dp"
+                        android:text="500元"
+                        android:textColor="@color/c_517da2"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View style="@style/money_change_line" />
+
+            <View
+                style="@style/money_change_line"
+                android:layout_marginTop="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="5dp"
+                    android:src="@mipmap/ic_selected_one" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:text="银行卡支付"
+                    android:textColor="@color/c_0f0f0f"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <View style="@style/money_change_line" />
+
+            <TextView
+                android:id="@+id/tv_submit"
+                android:layout_width="322dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/shape_5radius_solid_32b053"
+                android:gravity="center"
+                android:text="去支付"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:text="充值说明：\n
+1.充值成功以后，资金将30分钟内到账\n
+2.充值失败以后，资金将按原路径退回您的充值账户\n
+3.如有问题请咨询常信客服"
+                android:textColor="@color/c_868686"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="23dp"
+            android:padding="10dp"
+            android:textSize="14sp"
+            android:textColor="@color/c_374882"
+            android:text="常见问题"/>
+    </RelativeLayout>
+</net.cb.cb.library.view.HeadView>

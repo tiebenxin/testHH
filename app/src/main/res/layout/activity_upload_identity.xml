@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:headview_title="上传身份证照片">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_commit"
+                style="@style/app_btn_green"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="50dp"
+                android:text="确认并提交" />
+
+            <ImageView
+                android:id="@+id/iv_front"
+                android:layout_width="224dp"
+                android:layout_height="142dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="19dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_identity_card_front" />
+
+            <ImageView
+                android:id="@+id/iv_contrary"
+                android:layout_width="224dp"
+                android:layout_height="142dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="23dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_identity_card_contrary" />
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_marginLeft="19dp"
+                android:layout_marginTop="23dp"
+                android:text="上传“某某”本人身份证照片" />
+
+
+            <TextView
+                style="@style/app_txt_title_3"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:text="请上传身份证正面" />
+
+            <TextView
+                style="@style/app_txt_title_3"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:text="请上传身份证反面" />
+
+
+            <TextView
+                android:id="@+id/tv_auth_stat"
+                style="@style/app_txt_title_3"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:textSize="14sp" />
+
+
+            <TextView
+                style="@style/app_txt_title_3"
+                android:layout_marginLeft="19dp"
+                android:layout_marginTop="28dp"
+                android:text="1.请上传用户本人的身份证照片" />
+
+            <TextView
+                style="@style/app_txt_title_3"
+                android:layout_marginLeft="19dp"
+                android:text="2.拍照时请确认身份证边框完整、图像清晰" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</net.cb.cb.library.view.HeadView>

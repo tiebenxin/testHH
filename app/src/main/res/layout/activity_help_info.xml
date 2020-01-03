@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:headview_title="帮助">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_100"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/app_txt_title_3"
+            android:layout_marginLeft="8dp"
+            android:padding="5dp"
+            android:text="热门问题"
+            android:textColor="@color/gray_300" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            style="@style/app_txt_title_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:paddingLeft="13dp"
+            android:paddingTop="12dp"
+            android:paddingRight="13dp"
+            android:paddingBottom="12dp"
+            android:singleLine="false"
+            android:textSize="16sp" />
+    </LinearLayout>
+</net.cb.cb.library.view.HeadView>

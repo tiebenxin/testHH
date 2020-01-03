@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_root"
+        style="@style/app_layout_list1"
+        android:layout_marginTop="@dimen/app_margin_item_top">
+
+        <LinearLayout style="@style/app_layout_list1_item">
+
+            <ImageView
+                android:id="@+id/img_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                style="@style/app_img_head"/>
+
+            <TextView
+                android:id="@+id/tv_content"
+                style="@style/app_txt_title_2"
+                android:layout_marginLeft="12dp"
+                tool:text="xxxx"
+                android:visibility="visible" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/app_line" />
+</LinearLayout>

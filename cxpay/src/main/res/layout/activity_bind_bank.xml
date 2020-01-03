@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <net.cb.cb.library.view.HeadView
+        android:id="@+id/headView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:headview_title="添加银行卡">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/app_txt_content_1"
+                android:layout_marginLeft="@dimen/app_margin_main"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="请添加账户本人银行卡"
+                android:textSize="12sp" />
+
+
+            <LinearLayout style="@style/app_layout_list2_item">
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="@color/c_0f0f0f"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="持卡人" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/c_0f0f0f"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/app_layout_list2_item"
+                android:layout_marginTop="3dp">
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="@color/c_0f0f0f"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="银行卡号" />
+
+                <net.cb.cb.library.view.ClearEditText
+                    android:id="@+id/et_bank"
+                    android:textSize="14sp"
+                    android:textColor="@color/c_0f0f0f"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:background="@null"
+                    android:hint="请输入银行卡号"
+                    android:textColorHint="@color/gray_300"
+                    app:layout_constraintRight_toRightOf="parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/tv_view_support"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="10dp"
+                    android:text="查看支持银行"
+                    android:textColor="#374882"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_next"
+                android:layout_width="322dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:text="下一步"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:background="@drawable/shape_5radius_solid_32b053"
+                android:textColor="@color/white"/>
+
+
+        </LinearLayout>
+
+    </net.cb.cb.library.view.HeadView>
+</layout>

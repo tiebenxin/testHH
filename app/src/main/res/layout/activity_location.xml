@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:headview_title="位置">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/search_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/view_search"
+                style="@style/app_layout_list2_item_search"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/shape_search_bg">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:src="@mipmap/ic_msg_search" />
+
+                <net.cb.cb.library.view.ClearEditText
+                    android:id="@+id/edt_search"
+                    style="@style/app_edt1"
+                    android:background="@color/transparent"
+                    android:hint="搜索"
+                    android:imeOptions="actionSearch" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/mapview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clickable="true"/>
+
+        <com.yanlong.im.view.MaxHeightRecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:maxHeight="200dp"
+            app:layoutManager="LinearLayoutManager" />
+
+    </LinearLayout>
+</net.cb.cb.library.view.HeadView>
+
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/txt_sort"
+    style="@style/app_txt_title_3"
+
+    android:layout_weight="1"
+    android:layout_width="20dp"
+    android:layout_height="20dp"
+
+    android:gravity="center"
+    android:text="B" />

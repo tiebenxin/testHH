@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_layout"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="14dp"
+        android:src="@color/c_c05042"/>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_toRightOf="@+id/iv_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/c_868686"
+        android:layout_marginLeft="14dp"
+        android:textSize="12sp"
+        android:layout_marginTop="8dp"
+        android:text="2019-x-x  xx:xx"/>
+
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_toRightOf="@+id/iv_image"
+        android:layout_below="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/c_121516"
+        android:textSize="14sp"
+        android:layout_marginLeft="14dp"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/tv_cost"
+        android:layout_toRightOf="@+id/tv_time"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="7dp"
+        android:textColor="@color/c_121516"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:text="+0.0"/>
+
+    <TextView
+        android:id="@+id/tv_balance"
+        android:layout_toRightOf="@+id/tv_content"
+        android:layout_below="@+id/tv_cost"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:layout_width="wrap_content"
+        android:gravity="right"
+        android:layout_height="wrap_content"
+        android:textColor="@color/c_878787"
+        android:textSize="12sp"
+        android:visibility="visible"
+        android:text="余额 : 0.0"/>
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_toRightOf="@+id/tv_content"
+        android:layout_below="@+id/tv_cost"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:layout_width="wrap_content"
+        android:gravity="right"
+        android:layout_height="wrap_content"
+        android:textColor="@color/c_32b053"
+        android:textSize="12sp"
+        android:visibility="gone"
+        android:text=""/>
+
+
+    <View style="@style/app_line"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

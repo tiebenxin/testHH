@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_white_shape"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/txt_alert_msg"
+        style="@style/app_txt_title_2"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/app_margin_main"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="@dimen/app_margin_main"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:singleLine="false"
+        android:textStyle="bold"
+        android:text="标题" />
+
+
+    <EditText
+        android:id="@+id/ed_content"
+        style="@style/app_edt_friend"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:singleLine="false"
+        android:background="@drawable/bg_touch_edit"/>
+
+
+    <View
+        style="@style/app_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/view_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cl"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:text="取消"
+                android:textColor="@color/gray_400" />
+
+            <View
+                style="@style/app_line_portrait"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:text="更新"
+            android:textColor="@color/green_600" />
+    </LinearLayout>
+
+</LinearLayout>

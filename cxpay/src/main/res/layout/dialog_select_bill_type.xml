@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="10dp"
+        android:text="选择交易类型"
+        android:textColor="@color/c_0f0f0f"
+        android:textSize="16sp" />
+
+    <View style="@style/money_change_line"
+        android:background="@color/c_dcdddd"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tv_all"
+            android:layout_width="65dp"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:background="@drawable/shape_5radius_stroke_517da2"
+            android:text="全部"
+            android:textColor="@color/c_517da2"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_transfer"
+            android:layout_toRightOf="@+id/tv_all"
+            android:layout_width="65dp"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:background="@drawable/shape_5radius_stroke_517da2"
+            android:layout_marginLeft="48dp"
+            android:text="转账"
+            android:textColor="@color/c_517da2"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_redpacket"
+            android:layout_toRightOf="@+id/tv_transfer"
+            android:layout_width="65dp"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:background="@drawable/shape_5radius_stroke_517da2"
+            android:layout_marginLeft="48dp"
+            android:text="红包"
+            android:textColor="@color/c_517da2"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_recharge_withdraw"
+            android:layout_below="@+id/tv_all"
+            android:layout_width="65dp"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:background="@drawable/shape_5radius_stroke_517da2"
+            android:text="充值提现"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="30dp"
+            android:textColor="@color/c_517da2"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_refund"
+            android:layout_toRightOf="@+id/tv_recharge_withdraw"
+            android:layout_below="@+id/tv_transfer"
+            android:layout_width="65dp"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_5radius_stroke_517da2"
+            android:layout_marginLeft="48dp"
+            android:text="有退款"
+            android:textColor="@color/c_517da2"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</LinearLayout>

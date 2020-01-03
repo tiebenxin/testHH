@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <net.cb.cb.library.view.HeadView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/headView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:headview_title="退群成员列表">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+           <include
+               android:id="@+id/view_no_data"
+               layout="@layout/view_no_data"
+               android:visibility="gone"/>
+    </net.cb.cb.library.view.HeadView>
+</layout>

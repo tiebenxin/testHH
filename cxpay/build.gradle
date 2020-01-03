@@ -1,0 +1,58 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+
+    defaultConfig {
+        minSdkVersion 22
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+//    implementation 'androidx.appcompat:appcompat:1.1.0'
+    testImplementation 'junit:junit:4.12'
+//    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+//    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation project(':appcore')
+
+    //ali 路由
+    implementation 'com.alibaba:arouter-api:1.3.1'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.1.4'
+
+    // retrofit2
+//    api "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitVersion"
+//    api "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofitVersion"
+//    api "com.squareup.retrofit2:adapter-rxjava2:$rootProject.ext.retrofitVersion"
+//    // okhttp
+//    api "com.squareup.okhttp3:okhttp:$rootProject.ext.okhttpVersion"
+//    api "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.okhttpVersion"
+//    // rxjava
+//    api "io.reactivex.rxjava2:rxandroid:$rootProject.ext.rxandroidVersion"
+//    api "io.reactivex.rxjava2:rxjava:$rootProject.ext.rxjavaVersion"
+}

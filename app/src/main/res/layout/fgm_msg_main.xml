@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:splitMotionEvents="false"
+    android:orientation="vertical">
+
+    <net.cb.cb.library.view.ActionbarView
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:actionbar_rightIcon="@mipmap/ic_msg_more"
+        app:actionbar_showIconLeft="false"
+        app:actionbar_txtTitle="消息" />
+
+    <net.cb.cb.library.view.MultiListView
+        android:id="@+id/mtListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

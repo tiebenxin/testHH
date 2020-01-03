@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:headview_title="注册"
+    android:background="@color/gray_100">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <EditText
+            android:id="@+id/et_seting_user_name"
+            android:layout_marginTop="70dp"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:maxLength="16"
+            android:lines="1"
+            android:background="@drawable/bg_edt1"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/black"
+            android:text="请输入您的昵称"/>
+
+        <Button
+            android:id="@+id/btn_commit"
+            style="@style/app_btn_green"
+            android:layout_marginTop="50dp"
+            android:layout_width="160dp"
+            android:layout_height="38dp"
+            android:text="完成"/>
+    </LinearLayout>
+
+
+</net.cb.cb.library.view.HeadView>

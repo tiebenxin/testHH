@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:headview_title="新消息通知">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/app_layout_list2_item"
+            android:layout_marginTop="@dimen/app_margin_item_top">
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="接收新消息通知" />
+
+            <CheckBox
+                android:id="@+id/cb_receive_message"
+                style="@style/app_check" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/app_txt_content_2"
+            android:text="关闭后,手机将不再接收新消息的通知." />
+
+        <LinearLayout
+            style="@style/app_layout_list2_item"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="通知显示消息详情" />
+
+            <CheckBox
+                android:id="@+id/cb_message_info"
+                style="@style/app_check" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/app_txt_content_2"
+            android:text="若关闭,当收到消息时，通知提示将不显示发信人和内容摘要."
+            android:visibility="gone" />
+
+        <LinearLayout style="@style/app_layout_list2_item">
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="声音" />
+
+            <CheckBox
+                android:id="@+id/cb_message_voice"
+                style="@style/app_check" />
+
+        </LinearLayout>
+
+        <View style="@style/app_line" />
+
+        <LinearLayout style="@style/app_layout_list2_item">
+
+            <TextView
+                style="@style/app_txt_title_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="震动" />
+
+            <CheckBox
+                android:id="@+id/cb_message_shake"
+                style="@style/app_check" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/app_txt_content_2"
+            android:text="当产品在运行时,你可以设置是否需要声音或者振动." />
+
+    </LinearLayout>
+
+</net.cb.cb.library.view.HeadView>

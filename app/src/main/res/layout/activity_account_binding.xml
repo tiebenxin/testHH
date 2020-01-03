@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:headview_title="账号与绑定">
+
+    <net.cb.cb.library.view.LoadView
+        android:id="@+id/load_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <android.support.constraint.ConstraintLayout
+        style="@style/app_layout_list2_item"
+        android:layout_height="89dp"
+        android:layout_marginTop="@dimen/app_margin_item_top">
+
+        <ImageView
+            android:id="@+id/iv_weixin_icon"
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_weixin_banding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/app_txt_title_2"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="9dp"
+            android:text="微信"
+            app:layout_constraintLeft_toRightOf="@id/iv_weixin_icon"
+            app:layout_constraintTop_toTopOf="@id/iv_weixin_icon" />
+
+        <TextView
+            style="@style/app_txt_content_1"
+            android:layout_marginTop="8dp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <Button
+            android:id="@+id/btn_unbound"
+            style="@style/app_btn_green_s"
+            android:layout_width="63dp"
+            android:layout_height="30dp"
+            android:text="解绑"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</net.cb.cb.library.view.HeadView>

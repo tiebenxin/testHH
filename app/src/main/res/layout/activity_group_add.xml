@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.cb.cb.library.view.HeadView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headView_groupadd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:headview_title="申请增加本群人数上限至1000人">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/app_txt_title_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请输入申请群人数上限:" />
+
+        <EditText
+            android:id="@+id/ed_content_groupadd"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_edt1"
+            android:gravity="top"
+            android:maxLength="300"
+            android:hint="请输入申请添加群上限理由"
+            android:padding="5dp"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_commit_groupadd"
+            style="@style/app_btn_green"
+            android:layout_width="146dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_horizontal"
+            android:text="申请" />
+    </LinearLayout>
+</net.cb.cb.library.view.HeadView>
